@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-29T07:12:45.966Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="vhzWEsroVO1slHpQ-UY7" version="21.1.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-03-29T07:13:07.698Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="f5AqlSetwQvaFTUwXkOU" version="21.1.1" type="github" pages="3">
   <diagram name="페이지-1" id="I8e5lSfXxlh5LA0LPD_9">
     <mxGraphModel dx="3401" dy="1236" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -136,6 +136,9 @@
         </mxCell>
         <mxCell id="RGKpRNLPtBbpKYn9h6WN-1" value="&lt;h1&gt;P_light_parser()&lt;/h1&gt;&lt;div&gt;- Iot Central로 부터 getCommand/reqCommand() 요청을 받고 커맨드를 구성해서 SCMgr에게 전달한후 해당 커맨드에 맞는 resp parser()를 호출하고 정상이면 SCMgr Norify()함수를 통해서 해당 dev의 상태를 전달 (예, 조명 상태, 조명의 방 ID? 등..)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- 전달된 resp packet을 내부 버퍼에 복사&lt;/div&gt;&lt;div&gt;- 마지막 command에 상응하는 resp parser()함수 호출&lt;/div&gt;&lt;div&gt;- 각각의 resp parser()함수에서는&lt;/div&gt;&lt;div&gt;&amp;nbsp;: 기대하는 rx length 와 같거나 큰지?? 확인&lt;/div&gt;&lt;div&gt;&amp;nbsp;: header / cmd와 crc 체크&lt;/div&gt;&lt;div&gt;&amp;nbsp;: 이후 data 필드를 파싱해서 SCMgr에게 dev 상태 전달.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="-XDrDErhviG0c0KIS11g-1">
           <mxGeometry x="20" y="1020" width="540" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="oLL0UKy4owjcyLXmAkZR-0" value="&lt;h1&gt;Dev 구조체&lt;/h1&gt;&lt;div&gt;- ops&lt;/div&gt;&lt;div&gt;: parser() :&amp;nbsp;&lt;/div&gt;&lt;div&gt;: createCommand()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="-XDrDErhviG0c0KIS11g-1">
+          <mxGeometry x="560" y="330" width="360" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
