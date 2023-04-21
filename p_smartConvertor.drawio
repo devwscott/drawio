@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-21T03:07:45.970Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="WPqsuyoL34l_k7mw3NsP" version="21.1.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-04-21T03:40:13.833Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="aYOoH6pG1_Va2Wf5j77s" version="21.1.8" type="github" pages="2">
   <diagram name="페이지-1" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="3430" dy="1442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -96,7 +96,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="VZGb3c-POZyq048Ewfn3" name="페이지-2">
-    <mxGraphModel dx="2129" dy="721" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2315" dy="824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -137,11 +137,8 @@
             <mxPoint x="26" y="-90" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="M3H53ZE2tzekmrJ0qqxu-11" value="SC&lt;br&gt;Mgr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-610" y="520" width="160" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="M3H53ZE2tzekmrJ0qqxu-12" value="Dev2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-610" y="650" width="120" height="60" as="geometry" />
+        <mxCell id="M3H53ZE2tzekmrJ0qqxu-11" value="HL Core" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-800" y="680" width="160" height="80" as="geometry" />
         </mxCell>
         <mxCell id="M3H53ZE2tzekmrJ0qqxu-13" value="Wifi" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-280" y="550" width="160" height="60" as="geometry" />
@@ -173,8 +170,11 @@
         <mxCell id="_RuOBjHcqnV51FME8T-d-13" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="-280" y="920" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="_RuOBjHcqnV51FME8T-d-16" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- MQTT Client library(MQTT-C) 적용&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;- MQTT+TLS를 위해서 TLS library(mdebTLS) 적용&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;- mqtt broker(홈 GW) connection(연결)&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;- 연결된 RS485기기에 대해서 mqtt subscribe 설정&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;: 홈GW로 부터 전달되는 요청?을 처리하기 위해서(e.g 조명 off?)&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;: 각 mqtt subcribe 토픽별로 callback() 등록?&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;-&amp;nbsp; 연결된 RS485기기의&amp;nbsp; mqtt publish 토픽 발행&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;: 홈 GW에 연결된 RS485기기의 상태정보 전달&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="_RuOBjHcqnV51FME8T-d-16" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- intercore comm.을 위한 초기화 과정&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;- RT core에 intercore comm. message 전달&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;: 홈 GW로 부터 전달된 request 처리를 위해서?&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;- RT core로 부터 전달받은 intercore comm. message() 처리&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;: intercore의 cmd별로 handler()를 호출해서 처리&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;: cmd별 handler는 초기화 과정에서 설정?&amp;nbsp;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="-79" y="920" width="434" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="_RuOBjHcqnV51FME8T-d-17" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- Wifi AP 정보 설정/저장&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;: Wifi AP Info는 1개만 저장하는 형태 ??&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; (여러개의 AP정보를 저장할수 있지만 홈 GW Wifi AP정보만 저장)??&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;: 저장시 nickname추가해서 저장(e.g homeGW_APInfo)&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;- Wifi AP 연결(connect) enable/disable&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;: 저장된 Wifi AP info들중 nickname을 가지고 index(networkID)를 가져와서 enable/disable동작&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="-800" y="770" width="264" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
