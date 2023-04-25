@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-25T09:27:02.421Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="qSy5NU_JSyiAxq6t_yn5" version="21.2.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-04-25T09:32:19.029Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="hvUDxfbTuQrcHqxwqWTB" version="21.2.1" type="github" pages="3">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="2389" dy="865" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -96,7 +96,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="VZGb3c-POZyq048Ewfn3" name="HL 구성도">
-    <mxGraphModel dx="3492" dy="2187" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4319" dy="2187" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="구성도" parent="0" />
@@ -296,6 +296,9 @@
         </mxCell>
         <mxCell id="EgNj5nqnOxekGAKg0vwN-14" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;registerCallbak(cmd_handler_cb)&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;RT core로 부터 전달받은 InterCore message를 parsing하는 cb을 등록&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="AB7R_x14AM-etHOj2O1H-1">
           <mxGeometry y="1080" width="490" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="EgNj5nqnOxekGAKg0vwN-16" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;Non-Class 구조?&lt;/h1&gt;&lt;div&gt;하나의 pthread()에서 등록한 cb에서 전달한 message처리?&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;align=right;" vertex="1" parent="AB7R_x14AM-etHOj2O1H-1">
+          <mxGeometry x="-1730" y="600" width="490" height="55" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
