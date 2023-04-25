@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-25T07:54:07.910Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="FYlg7UOS_imMyps2Qiqz" version="21.2.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-04-25T07:55:08.588Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="qj5V_bRZlMftAtH7mYTO" version="21.2.1" type="github" pages="3">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="2389" dy="865" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -189,8 +189,8 @@
         </mxCell>
         <mxCell id="-Sv2IpiAr-EpT4ZxpUQu-4" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=11;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-1400" y="400" as="sourcePoint" />
-            <mxPoint x="760" y="400" as="targetPoint" />
+            <mxPoint x="-1400" y="360" as="sourcePoint" />
+            <mxPoint x="760" y="360" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="-Sv2IpiAr-EpT4ZxpUQu-5" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=11;" parent="1" edge="1">
@@ -267,7 +267,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nkq195g6vkh4-pPKMXvN" name="RT 구성도">
-    <mxGraphModel dx="4494" dy="2742" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5559" dy="3332" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -361,8 +361,8 @@
         </mxCell>
         <mxCell id="Fk_FFkVWprzBMD3RYix3-1" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=11;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-1100" y="280" as="sourcePoint" />
-            <mxPoint x="1060" y="280" as="targetPoint" />
+            <mxPoint x="-1102" y="300" as="sourcePoint" />
+            <mxPoint x="1058" y="300" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="85M8fw8NXU-RHyzpaDxU-1" value="485" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -411,91 +411,91 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="cfgCK-iw2YGR3Wh1lL07-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="100" y="1502" width="860" height="578" as="geometry" />
+          <mxGeometry x="180" y="1544" width="730" height="578" as="geometry" />
         </mxCell>
         <mxCell id="cfgCK-iw2YGR3Wh1lL07-2" value="RT Core - 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="80" y="1480" width="160" height="80" as="geometry" />
+          <mxGeometry x="160" y="1522" width="160" height="80" as="geometry" />
         </mxCell>
         <mxCell id="cfgCK-iw2YGR3Wh1lL07-3" value="InterCore Communication" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="600" y="1740" width="160" height="60" as="geometry" />
+          <mxGeometry x="680" y="1782" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cfgCK-iw2YGR3Wh1lL07-4" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="600" y="1710" width="160" height="30" as="geometry" />
+          <mxGeometry x="680" y="1752" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="cfgCK-iw2YGR3Wh1lL07-5" value="Dev" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="278" y="1630" width="160" height="60" as="geometry" />
+          <mxGeometry x="358" y="1672" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cfgCK-iw2YGR3Wh1lL07-6" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="278" y="1600" width="160" height="30" as="geometry" />
+          <mxGeometry x="358" y="1642" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="cfgCK-iw2YGR3Wh1lL07-7" value="Dev" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="288" y="1640" width="160" height="60" as="geometry" />
+          <mxGeometry x="368" y="1682" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cfgCK-iw2YGR3Wh1lL07-8" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="288" y="1610" width="160" height="30" as="geometry" />
+          <mxGeometry x="368" y="1652" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="cfgCK-iw2YGR3Wh1lL07-9" value="Dev" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="298" y="1650" width="160" height="60" as="geometry" />
+          <mxGeometry x="378" y="1692" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cfgCK-iw2YGR3Wh1lL07-10" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="298" y="1620" width="160" height="30" as="geometry" />
+          <mxGeometry x="378" y="1662" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="cfgCK-iw2YGR3Wh1lL07-11" value="485" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="288" y="1830" width="160" height="60" as="geometry" />
+          <mxGeometry x="368" y="1872" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cfgCK-iw2YGR3Wh1lL07-12" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="288" y="1800" width="160" height="30" as="geometry" />
+          <mxGeometry x="368" y="1842" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="-770" y="1501" width="690" height="579" as="geometry" />
+          <mxGeometry x="-690" y="1543" width="690" height="579" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-2" value="HL Core" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="-800" y="1479" width="160" height="80" as="geometry" />
+          <mxGeometry x="-720" y="1521" width="160" height="80" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-3" value="Wifi" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-560" y="1572" width="160" height="60" as="geometry" />
+          <mxGeometry x="-480" y="1614" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-4" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="-560" y="1542" width="160" height="30" as="geometry" />
+          <mxGeometry x="-480" y="1584" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-5" value="MQTT" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-558" y="1731" width="160" height="60" as="geometry" />
+          <mxGeometry x="-478" y="1773" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-6" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="-558" y="1701" width="160" height="30" as="geometry" />
+          <mxGeometry x="-478" y="1743" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-7" value="Mqtt library&lt;br style=&quot;font-size: 10px;&quot;&gt;(MQTT-C)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="-548" y="1800" width="60" height="40" as="geometry" />
+          <mxGeometry x="-468" y="1842" width="60" height="40" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-8" value="TLS library&lt;br&gt;(mbedTLS)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="-468" y="1800" width="60" height="40" as="geometry" />
+          <mxGeometry x="-388" y="1842" width="60" height="40" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-9" value="InterCore Communication" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-280" y="1731" width="160" height="60" as="geometry" />
+          <mxGeometry x="-200" y="1773" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-10" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="-280" y="1701" width="160" height="30" as="geometry" />
+          <mxGeometry x="-200" y="1743" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-11" value="Home&lt;br&gt;GateWay" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="-1120" y="1479" width="160" height="80" as="geometry" />
+          <mxGeometry x="-1040" y="1521" width="160" height="80" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-12" value="Wifi AP" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.wifi;pointerEvents=1" vertex="1" parent="1">
-          <mxGeometry x="-989.7" y="1458" width="29.7" height="21" as="geometry" />
+          <mxGeometry x="-909.7" y="1500" width="29.7" height="21" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-13" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/smartphone-signal-5g-trading/64/Smartphone_NFC-128.png" vertex="1" parent="1">
-          <mxGeometry x="-1140" y="1458" width="38" height="38" as="geometry" />
+          <mxGeometry x="-1060" y="1500" width="38" height="38" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="-fK0Gv4iXSy3QCoNFZn2-2" target="-fK0Gv4iXSy3QCoNFZn2-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-15" value="InterCore Communication" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;strokeColor=#FF0000;" vertex="1" parent="1">
-          <mxGeometry x="-560" y="1940" width="160" height="60" as="geometry" />
+          <mxGeometry x="-480" y="1982" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-16" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#FF0000;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="-560" y="1910" width="160" height="30" as="geometry" />
+          <mxGeometry x="-480" y="1952" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-17" value="Json library" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="-510" y="1851" width="60" height="40" as="geometry" />
+          <mxGeometry x="-430" y="1893" width="60" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
