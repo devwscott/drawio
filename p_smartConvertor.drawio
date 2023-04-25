@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-25T07:55:08.588Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="qj5V_bRZlMftAtH7mYTO" version="21.2.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-04-25T09:04:03.892Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="QOPUj02y01EGdtH3RjaN" version="21.2.1" type="github" pages="3">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="2389" dy="865" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -96,10 +96,10 @@
     </mxGraphModel>
   </diagram>
   <diagram id="VZGb3c-POZyq048Ewfn3" name="HL 구성도">
-    <mxGraphModel dx="4778" dy="2899" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3885" dy="2405" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
-        <mxCell id="1" parent="0" />
+        <mxCell id="1" value="구성도" parent="0" />
         <mxCell id="lNFLW8SOZSIvFxa3DpBR-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" parent="1" vertex="1">
           <mxGeometry x="100" y="1491" width="320" height="390" as="geometry" />
         </mxCell>
@@ -257,11 +257,24 @@
         <mxCell id="F7MN91DMRFYSvIqF9Vn4-16" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#FF0000;dashed=1;" parent="1" vertex="1">
           <mxGeometry x="-610" y="1900" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="5y9YOOWWq7AHcJ_v1mdL-4" value="Json library" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="5y9YOOWWq7AHcJ_v1mdL-4" value="Json library" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="-715" y="810" width="60" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="5y9YOOWWq7AHcJ_v1mdL-5" value="Json library" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="5y9YOOWWq7AHcJ_v1mdL-5" value="Json library" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="-560" y="1841" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AB7R_x14AM-etHOj2O1H-1" value="functions" parent="0" />
+        <mxCell id="AB7R_x14AM-etHOj2O1H-5" value="&lt;h1&gt;storeAPInfo(ssid, wpa2psk, passwd)&lt;/h1&gt;&lt;p&gt;전달된 AP Info를 저장한다. 내부적으로 nickname 사용?&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="AB7R_x14AM-etHOj2O1H-1">
+          <mxGeometry x="-40" y="370" width="440" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AB7R_x14AM-etHOj2O1H-6" value="&lt;h1&gt;connect()&lt;/h1&gt;&lt;p&gt;저장된 AP Info를 특정 nickname으로 로딩해서 해당 정보로 Wifi AP connect()시도&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="AB7R_x14AM-etHOj2O1H-1">
+          <mxGeometry x="-40" y="440" width="490" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AB7R_x14AM-etHOj2O1H-7" value="&lt;h1&gt;disConnect()&lt;/h1&gt;&lt;p&gt;연결된 Wifi AP와의 연결을 끊는다.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="AB7R_x14AM-etHOj2O1H-1">
+          <mxGeometry x="-40" y="520" width="490" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AB7R_x14AM-etHOj2O1H-8" value="&lt;h1&gt;getStatus(bConnected,&amp;nbsp; ipAddr[])&lt;/h1&gt;&lt;p&gt;Wifi AP에 연결상태 리턴 및 할당된 IP Address를 반환?&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="AB7R_x14AM-etHOj2O1H-1">
+          <mxGeometry x="-40" y="600" width="490" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -404,97 +417,97 @@
         <mxCell id="28QXJl1R2aJAxkLcAT3O-1" value="&lt;span style=&quot;font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;=&amp;gt; HW적으로 485 인터페이스가 1개가 아니라 2개일 경우, 처리 가능한 구조인가????&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontColor=#FF0000;fontSize=12;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-470" y="1200" width="270" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="J_9y_Apq8T7VAP6SQIFM-1" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=11;" edge="1" parent="1">
+        <mxCell id="J_9y_Apq8T7VAP6SQIFM-1" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=11;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-1110" y="1360" as="sourcePoint" />
             <mxPoint x="1050" y="1360" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cfgCK-iw2YGR3Wh1lL07-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
+        <mxCell id="cfgCK-iw2YGR3Wh1lL07-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" parent="1" vertex="1">
           <mxGeometry x="180" y="1544" width="730" height="578" as="geometry" />
         </mxCell>
-        <mxCell id="cfgCK-iw2YGR3Wh1lL07-2" value="RT Core - 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="cfgCK-iw2YGR3Wh1lL07-2" value="RT Core - 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="160" y="1522" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="cfgCK-iw2YGR3Wh1lL07-3" value="InterCore Communication" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="cfgCK-iw2YGR3Wh1lL07-3" value="InterCore Communication" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="680" y="1782" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="cfgCK-iw2YGR3Wh1lL07-4" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="cfgCK-iw2YGR3Wh1lL07-4" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="680" y="1752" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="cfgCK-iw2YGR3Wh1lL07-5" value="Dev" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="cfgCK-iw2YGR3Wh1lL07-5" value="Dev" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="358" y="1672" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="cfgCK-iw2YGR3Wh1lL07-6" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="cfgCK-iw2YGR3Wh1lL07-6" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="358" y="1642" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="cfgCK-iw2YGR3Wh1lL07-7" value="Dev" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="cfgCK-iw2YGR3Wh1lL07-7" value="Dev" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="368" y="1682" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="cfgCK-iw2YGR3Wh1lL07-8" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="cfgCK-iw2YGR3Wh1lL07-8" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="368" y="1652" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="cfgCK-iw2YGR3Wh1lL07-9" value="Dev" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="cfgCK-iw2YGR3Wh1lL07-9" value="Dev" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="378" y="1692" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="cfgCK-iw2YGR3Wh1lL07-10" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="cfgCK-iw2YGR3Wh1lL07-10" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="378" y="1662" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="cfgCK-iw2YGR3Wh1lL07-11" value="485" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="cfgCK-iw2YGR3Wh1lL07-11" value="485" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="368" y="1872" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="cfgCK-iw2YGR3Wh1lL07-12" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="cfgCK-iw2YGR3Wh1lL07-12" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="368" y="1842" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" parent="1" vertex="1">
           <mxGeometry x="-690" y="1543" width="690" height="579" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-2" value="HL Core" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-2" value="HL Core" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="-720" y="1521" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-3" value="Wifi" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-3" value="Wifi" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-480" y="1614" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-4" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-4" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="-480" y="1584" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-5" value="MQTT" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-5" value="MQTT" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-478" y="1773" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-6" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-6" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="-478" y="1743" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-7" value="Mqtt library&lt;br style=&quot;font-size: 10px;&quot;&gt;(MQTT-C)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-7" value="Mqtt library&lt;br style=&quot;font-size: 10px;&quot;&gt;(MQTT-C)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="-468" y="1842" width="60" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-8" value="TLS library&lt;br&gt;(mbedTLS)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-8" value="TLS library&lt;br&gt;(mbedTLS)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="-388" y="1842" width="60" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-9" value="InterCore Communication" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-9" value="InterCore Communication" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-200" y="1773" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-10" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-10" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="-200" y="1743" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-11" value="Home&lt;br&gt;GateWay" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-11" value="Home&lt;br&gt;GateWay" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="-1040" y="1521" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-12" value="Wifi AP" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.wifi;pointerEvents=1" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-12" value="Wifi AP" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.wifi;pointerEvents=1" parent="1" vertex="1">
           <mxGeometry x="-909.7" y="1500" width="29.7" height="21" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-13" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/smartphone-signal-5g-trading/64/Smartphone_NFC-128.png" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-13" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/smartphone-signal-5g-trading/64/Smartphone_NFC-128.png" parent="1" vertex="1">
           <mxGeometry x="-1060" y="1500" width="38" height="38" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="-fK0Gv4iXSy3QCoNFZn2-2" target="-fK0Gv4iXSy3QCoNFZn2-2">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="-fK0Gv4iXSy3QCoNFZn2-2" target="-fK0Gv4iXSy3QCoNFZn2-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-15" value="InterCore Communication" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;strokeColor=#FF0000;" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-15" value="InterCore Communication" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;strokeColor=#FF0000;" parent="1" vertex="1">
           <mxGeometry x="-480" y="1982" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-16" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#FF0000;dashed=1;" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-16" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;[ driver / module ]&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fillColor=#dae8fc;strokeColor=#FF0000;dashed=1;" parent="1" vertex="1">
           <mxGeometry x="-480" y="1952" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-17" value="Json library" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="-fK0Gv4iXSy3QCoNFZn2-17" value="Json library" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="-430" y="1893" width="60" height="40" as="geometry" />
         </mxCell>
       </root>
