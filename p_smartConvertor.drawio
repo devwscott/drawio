@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-26T06:47:13.510Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="xevdg81LTEEPmx-3s5JA" version="21.2.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-04-26T06:49:45.399Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="ebxr8sfGb5lm0NN_VdHo" version="21.2.1" type="github" pages="3">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="1877" dy="577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -297,8 +297,8 @@
         <mxCell id="EgNj5nqnOxekGAKg0vwN-14" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;registerCallbak(cmd_handler_cb)&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;RT core로 부터 전달받은 InterCore message를 parsing하는 cb을 등록&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" parent="AB7R_x14AM-etHOj2O1H-1" vertex="1">
           <mxGeometry y="1070" width="490" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="EgNj5nqnOxekGAKg0vwN-16" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;최상위 Application으로 Non-Class 구조로 구현? Class형식으로 가능?&lt;/h1&gt;&lt;div&gt;내부적으로 pthread()가 있어야 할거 같고, MQTT/InterCore에 등록한 Callback()에서 해당 pthread()로 message를 전달하고, 해당 pthread에서 message에 따라서 동작하도록&lt;/div&gt;&lt;div&gt;예를들어서, MQTT sub CB을 통해서 message가 전달되면 InterCore를 통해서 해당 cmd를 RT core로 전달?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;align=left;" parent="AB7R_x14AM-etHOj2O1H-1" vertex="1">
-          <mxGeometry x="-1730" y="600" width="490" height="130" as="geometry" />
+        <mxCell id="EgNj5nqnOxekGAKg0vwN-16" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;최상위 Application으로 Non-Class 구조로 구현? Class형식으로 가능?&lt;/h1&gt;&lt;div&gt;내부적으로 pthread()가 있어야 할거 같고, MQTT/InterCore에 등록한 Callback()에서 해당 pthread()로 message를 전달하고, 해당 pthread에서 message에 따라서 동작하도록&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;즉, MQTT/InterCore CB로 부터 ptheread로 message를 전달하면&lt;/div&gt;&lt;div&gt;내부 MQTT/InterCore 메세지/CMD parser() 호출해서 동작하도록??&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;예를들어서, MQTT sub CB을 통해서 message가 전달되면 해당 MQTT parser()가 호출되고 내부적으로 InterCore를 통해서 해당 cmd를 RT core로 전달?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;align=left;" parent="AB7R_x14AM-etHOj2O1H-1" vertex="1">
+          <mxGeometry x="-1730" y="600" width="490" height="280" as="geometry" />
         </mxCell>
         <mxCell id="iTp0tCFJbQGeIfdXbMuE-1" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;publish(topic[], message[])&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;전달된 topic에 message를 전달한다.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" parent="AB7R_x14AM-etHOj2O1H-1" vertex="1">
           <mxGeometry y="855" width="490" height="55" as="geometry" />
@@ -307,7 +307,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nkq195g6vkh4-pPKMXvN" name="RT 구성도">
-    <mxGraphModel dx="2889" dy="1848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3054" dy="1938" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="0_구성도" parent="0" />
@@ -563,6 +563,9 @@
         </mxCell>
         <mxCell id="-C6PNh_qHMcCdSNuimvC-3" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;registerCallbak(cmd_handler_cb)&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;RT core로 부터 전달받은 InterCore message를 parsing하는 cb을 등록&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="660" y="1090" width="490" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="eQSZSoGPUT3oUdq_tkpj-1" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;최상위 Application으로 Non-Class 구조로 구현? Class형식으로 가능?&lt;/h1&gt;&lt;div&gt;내부적으로 pthread()가 있어야 할거 같고, MQTT/InterCore에 등록한 Callback()에서 해당 pthread()로 message를 전달하고, 해당 pthread에서 message에 따라서 동작하도록&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;즉, MQTT/InterCore CB로 부터 ptheread로 message를 전달하면&lt;/div&gt;&lt;div&gt;내부 MQTT/InterCore 메세지/CMD parser() 호출해서 동작하도록??&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;예를들어서, MQTT sub CB을 통해서 message가 전달되면 해당 MQTT parser()가 호출되고 내부적으로 InterCore를 통해서 해당 cmd를 RT core로 전달?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-1030" y="640" width="490" height="280" as="geometry" />
         </mxCell>
         <mxCell id="rneJ1RzEtxrCaaSCAXn--1" value="1_functions" parent="0" />
         <mxCell id="rneJ1RzEtxrCaaSCAXn--2" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;construct()&lt;/h1&gt;&lt;div&gt;기기 Type, HW 인터페이스 타입(UART/I2C)&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" parent="rneJ1RzEtxrCaaSCAXn--1" vertex="1">
