@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-26T01:59:00.896Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="ga9CiXcq1o-e0QB6-g-L" version="21.2.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-04-26T01:59:42.770Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="r03v1DZf3nrahrJhbuad" version="21.2.1" type="github" pages="3">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="2389" dy="865" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -96,7 +96,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="VZGb3c-POZyq048Ewfn3" name="HL 구성도">
-    <mxGraphModel dx="4712" dy="2405" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="6386" dy="3332" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="구성도" parent="0" />
@@ -263,9 +263,6 @@
         <mxCell id="5y9YOOWWq7AHcJ_v1mdL-5" value="Json library" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="-560" y="1841" width="60" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="plRiRvOs92knbk9xMuk0-2" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;publish(topic[], message[])&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;전달된 topic에 message를 전달한다.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="1" y="860" width="490" height="55" as="geometry" />
-        </mxCell>
         <mxCell id="AB7R_x14AM-etHOj2O1H-1" value="functions" parent="0" />
         <mxCell id="AB7R_x14AM-etHOj2O1H-5" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;storeAPInfo(ssid, wpa2psk, passwd)&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;전달된 AP Info를 저장한다. 내부적으로 nickname 사용?&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" parent="AB7R_x14AM-etHOj2O1H-1" vertex="1">
           <mxGeometry y="400" width="520" height="50" as="geometry" />
@@ -302,6 +299,9 @@
         </mxCell>
         <mxCell id="EgNj5nqnOxekGAKg0vwN-16" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;최상위 Application으로 Non-Class 구조로 구현? Class형식으로 가능?&lt;/h1&gt;&lt;div&gt;내부적으로 pthread()가 있어야 할거 같고, MQTT/InterCore에 등록한 Callback()에서 해당 pthread()로 message를 전달하고, 해당 pthread에서 message에 따라서 동작하도록&lt;/div&gt;&lt;div&gt;예를들어서, MQTT sub CB을 통해서 message가 전달되면 InterCore를 통해서 해당 cmd를 RT core로 전달?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;align=left;" parent="AB7R_x14AM-etHOj2O1H-1" vertex="1">
           <mxGeometry x="-1730" y="600" width="490" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="iTp0tCFJbQGeIfdXbMuE-1" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;publish(topic[], message[])&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;전달된 topic에 message를 전달한다.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="AB7R_x14AM-etHOj2O1H-1">
+          <mxGeometry y="855" width="490" height="55" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
