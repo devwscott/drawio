@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-26T02:56:41.469Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="Auq_kiToOwzSXS1osFaz" version="21.2.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-04-26T02:57:40.370Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="fXUdR1iddRFfHqzpLkz9" version="21.2.1" type="github" pages="3">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="2389" dy="865" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -544,17 +544,17 @@
         <mxCell id="rneJ1RzEtxrCaaSCAXn--3" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;send(data[], size)&lt;/h1&gt;&lt;div&gt;전달된 TX data를 send하는 동작&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
           <mxGeometry x="640" y="410" width="440" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="rneJ1RzEtxrCaaSCAXn--4" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;registerCallbak(recv_cb)&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;485모듈을 통해서 recv한 data를 상위layer로 전달하기 위한 cb 등록&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+        <mxCell id="rneJ1RzEtxrCaaSCAXn--4" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;registerCallbak(recv_cb)&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;485모듈을 통해서 recv한 data를 상위layer로 전달하기 위한 cb 등록&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;fontColor=#FF0000;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
           <mxGeometry x="640" y="465" width="440" height="55" as="geometry" />
         </mxCell>
         <mxCell id="rneJ1RzEtxrCaaSCAXn--5" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;static void receiverTask()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;open한 485모듈로 들어오는 incoming data 처리를 위해 event polling()&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
           <mxGeometry x="640" y="525" width="490" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rneJ1RzEtxrCaaSCAXn--8" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;static void receiveEventHandler()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;485모듈로 들어오는 data를 실제 read하고 등록된 cb호출하는 Handler&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+        <mxCell id="rneJ1RzEtxrCaaSCAXn--8" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;static void receiveEventHandler()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;485모듈로 들어오는 data를 실제 read하고 등록된 cb호출하는 Handler&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;fontColor=#FF0000;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
           <mxGeometry x="640" y="585" width="490" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rneJ1RzEtxrCaaSCAXn--11" value="&lt;h1&gt;MT3620 UART driver가 Interrupt구조가 아니다.&lt;/h1&gt;&lt;div&gt;receiverTask()에서 getchar()를 호출해서 링버퍼로 넣고 read() API를 통해서 data read하는 구조로 되어야 할듯 하다.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;이때, receiverTask의 priority가 다른 task보다 높게 설정???&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
-          <mxGeometry x="1130" y="430" width="360" height="120" as="geometry" />
+        <mxCell id="rneJ1RzEtxrCaaSCAXn--11" value="&lt;h1&gt;MT3620 UART driver가 Interrupt구조가 아니다.&lt;/h1&gt;&lt;div&gt;receiverTask()에서 getchar()를 호출해서 링버퍼로 넣고 read() API를 통해서 data read하는 구조로 되어야 할듯 하다.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;이때, receiverTask의 priority가 다른 task보다 높게 설정???&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;=&amp;gt; cb을 통한 이벤트가 상위layer로 올라가지 않는 구조&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;registercallback() / receiveEventHandler()삭제 ????&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="1130" y="430" width="360" height="200" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
