@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-26T01:59:42.770Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="r03v1DZf3nrahrJhbuad" version="21.2.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-04-26T02:01:37.872Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="_xx9x_2D44G2sjSFZH8K" version="21.2.1" type="github" pages="3">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="2389" dy="865" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -99,7 +99,7 @@
     <mxGraphModel dx="6386" dy="3332" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
-        <mxCell id="1" value="구성도" parent="0" />
+        <mxCell id="1" value="0_구성도" parent="0" />
         <mxCell id="lNFLW8SOZSIvFxa3DpBR-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" parent="1" vertex="1">
           <mxGeometry x="100" y="1491" width="320" height="390" as="geometry" />
         </mxCell>
@@ -263,7 +263,7 @@
         <mxCell id="5y9YOOWWq7AHcJ_v1mdL-5" value="Json library" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="-560" y="1841" width="60" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="AB7R_x14AM-etHOj2O1H-1" value="functions" parent="0" />
+        <mxCell id="AB7R_x14AM-etHOj2O1H-1" value="1_functions" parent="0" />
         <mxCell id="AB7R_x14AM-etHOj2O1H-5" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;storeAPInfo(ssid, wpa2psk, passwd)&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;전달된 AP Info를 저장한다. 내부적으로 nickname 사용?&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" parent="AB7R_x14AM-etHOj2O1H-1" vertex="1">
           <mxGeometry y="400" width="520" height="50" as="geometry" />
         </mxCell>
@@ -310,7 +310,7 @@
     <mxGraphModel dx="3298" dy="2080" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
-        <mxCell id="1" parent="0" />
+        <mxCell id="1" value="0_구성도" parent="0" />
         <mxCell id="mSUdW2-L2riXdI4aICEO-44" value="485" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="10" y="435" width="160" height="60" as="geometry" />
         </mxCell>
@@ -537,26 +537,24 @@
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-17" value="Json library" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="-430" y="1893" width="60" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="vFSZJfIF_KY-2IrLYipL-1" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;construct()&lt;/h1&gt;&lt;div&gt;485모듈 index, 통신 baudrate 설정, open()동작&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="350" width="520" height="50" as="geometry" />
+        <mxCell id="rneJ1RzEtxrCaaSCAXn--1" value="1_functions" parent="0" />
+        <mxCell id="rneJ1RzEtxrCaaSCAXn--2" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;construct()&lt;/h1&gt;&lt;div&gt;485모듈 index, 통신 baudrate 설정, open()동작&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="640" y="355" width="520" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="vFSZJfIF_KY-2IrLYipL-2" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;send(data[], size)&lt;/h1&gt;&lt;div&gt;전달된 TX data를 send하는 동작&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="405" width="520" height="50" as="geometry" />
+        <mxCell id="rneJ1RzEtxrCaaSCAXn--3" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;send(data[], size)&lt;/h1&gt;&lt;div&gt;전달된 TX data를 send하는 동작&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="640" y="410" width="520" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="rX8FugqN4tQLJLs7SS7M-1" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;registerCallbak(recv_cb)&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;485모듈을 통해서 recv한 data를 상위layer로 전달하기 위한 cb 등록&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="640" y="460" width="490" height="55" as="geometry" />
+        <mxCell id="rneJ1RzEtxrCaaSCAXn--4" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;registerCallbak(recv_cb)&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;485모듈을 통해서 recv한 data를 상위layer로 전달하기 위한 cb 등록&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="640" y="465" width="490" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="0dmjnxNaft9Eq8lZT1BF-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0dmjnxNaft9Eq8lZT1BF-1" target="0dmjnxNaft9Eq8lZT1BF-3">
+        <mxCell id="rneJ1RzEtxrCaaSCAXn--7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="rneJ1RzEtxrCaaSCAXn--1" source="rneJ1RzEtxrCaaSCAXn--5" target="rneJ1RzEtxrCaaSCAXn--6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0dmjnxNaft9Eq8lZT1BF-1" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;static void receiverTask()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;open한 485모듈로 들어오는 incoming data 처리를 위해 event polling()&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="640" y="520" width="490" height="60" as="geometry" />
+        <mxCell id="rneJ1RzEtxrCaaSCAXn--5" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;static void receiverTask()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;open한 485모듈로 들어오는 incoming data 처리를 위해 event polling()&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="640" y="525" width="490" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="0dmjnxNaft9Eq8lZT1BF-2" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;static void receiverTask()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;open한 485모듈로 들어오는 incoming data 처리를 위해 event polling()&lt;/p&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;-&amp;gt; NonRTOS에서는 대부분 EventLoop_RegisterIo()를 사용하는데 이것을 사용할지? 아니면 CreateEpollFd()를 사용할지 결정? 해야 할듯..&lt;/p&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;-&amp;gt; 위 구조를 사용하면 receiverTask()에서는 해당 EventLoop / Epoll 이벤트 waiting 동작하는 형태이고 EventLoop/Epoll에 등록한 handler에서 처리되도록 해야 할듯...&lt;/p&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="1010" y="740" width="490" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="0dmjnxNaft9Eq8lZT1BF-3" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1395" y="520" width="120" height="60" as="geometry" />
+        <mxCell id="rneJ1RzEtxrCaaSCAXn--6" value="&lt;p style=&quot;border-color: var(--border-color); font-size: 14px; text-align: left;&quot;&gt;-&amp;gt; NonRTOS에서는 대부분 EventLoop_RegisterIo()를 사용하는데 이것을 사용할지? 아니면 CreateEpollFd()를 사용할지 결정? 해야 할듯..&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); font-size: 14px; text-align: left;&quot;&gt;-&amp;gt; 위 구조를 사용하면 receiverTask()에서는 해당 EventLoop / Epoll 이벤트 waiting 동작하는 형태이고 EventLoop/Epoll에 등록한 handler에서 처리되도록 해야 할듯...&lt;/p&gt;" style="whiteSpace=wrap;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="1160" y="480" width="680" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
