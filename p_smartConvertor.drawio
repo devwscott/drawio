@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-26T07:28:31.172Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="Y6HOskB3V81do6xobxAj" version="21.2.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-04-26T07:36:59.944Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="HFpl3cNRgDXXTThfF7cv" version="21.2.1" type="github" pages="3">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="1877" dy="577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -96,7 +96,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="VZGb3c-POZyq048Ewfn3" name="HL 구성도">
-    <mxGraphModel dx="3716" dy="1848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3531" dy="1746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="0_구성도" parent="0" />
@@ -307,7 +307,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nkq195g6vkh4-pPKMXvN" name="RT 구성도">
-    <mxGraphModel dx="4279" dy="2612" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3754" dy="2323" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="0_구성도" parent="0" />
@@ -580,8 +580,11 @@
         <mxCell id="SOsYK8vz-zOpP49QyFnc-5" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;makeCommand(enum_cmd_type)&lt;/h1&gt;&lt;div&gt;전달된 cmd_type에 해당하는 cmd를 packet으로 구성해서 리턴&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
           <mxGeometry x="640" y="840" width="540" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="SOsYK8vz-zOpP49QyFnc-6" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;parser()&lt;/h1&gt;&lt;div&gt;receive한 485 data를 parsing하는 동작. 이때 마지막으로 전달한 cmd_type을 가지고 parsing한다. 즉, 내부적으로 getCommand()/makeCommand()시 cmd_type을 저장한다?&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
-          <mxGeometry x="640" y="900" width="540" height="80" as="geometry" />
+        <mxCell id="3LH4tE0E7hOVf6D3rTla-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="rneJ1RzEtxrCaaSCAXn--1" source="SOsYK8vz-zOpP49QyFnc-6" target="3LH4tE0E7hOVf6D3rTla-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SOsYK8vz-zOpP49QyFnc-6" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;parser()&lt;/h1&gt;&lt;div&gt;receive한 485 data를 parsing하는 동작. 이때 마지막으로 전달한 cmd_type을 가지고 parsing한다. 즉, 내부적으로 getCommand()/makeCommand()시 cmd_type을 저장한다?&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#ff0000&quot;&gt;-&amp;gt; 상태조회 data를 상위 Layer에 전달하는 것과 InterCore를 통해서 HL에 전달하는 것 처리?? 어떻게??&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="640" y="900" width="540" height="110" as="geometry" />
         </mxCell>
         <mxCell id="SOsYK8vz-zOpP49QyFnc-7" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;sendCommand(data[]) / sendMessage()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;HL core에 InterCore message를 전달한다. 내부적으로 EnqueueData()이용?&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
           <mxGeometry x="660" y="1024" width="490" height="55" as="geometry" />
@@ -591,6 +594,15 @@
         </mxCell>
         <mxCell id="SOsYK8vz-zOpP49QyFnc-9" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;registerCallbak(cmd_handler_cb)&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;RT core로 부터 전달받은 InterCore message를 parsing하는 cb을 등록&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
           <mxGeometry x="660" y="1090" width="490" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="3LH4tE0E7hOVf6D3rTla-1" value="Common Data" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="-170" y="605" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3LH4tE0E7hOVf6D3rTla-2" value="&lt;font color=&quot;#ff0000&quot;&gt;[ 어떤 방식으로 RT core와 Dev 연결??]&lt;br&gt;Dev의 Parser를 통해서&amp;nbsp;&lt;br&gt;각 RS485기기의 상태값을 얻어왔을때&lt;br&gt;상위 Layer(Application)으로 해당 값을 전달/저장하는 구조가 필요??&lt;br&gt;&lt;br&gt;Dev의 상태조회 cmd에 대한 parser동작시 InterCore를 통해서 해당 상태값을&lt;br&gt;HL core에 전달하는 구조 필요&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry y="575" width="380" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3LH4tE0E7hOVf6D3rTla-3" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;상위 Layer의 CB을 Dev에 등록하고&lt;/font&gt;&lt;/h1&gt;&lt;div&gt;&lt;font color=&quot;#ff0000&quot;&gt;Dev의 Parser에서 해당 CB를 이용해서 상태조회 Data를 전달하는 방식??&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="1260" y="900" width="540" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
