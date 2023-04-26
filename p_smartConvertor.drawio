@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-26T06:49:45.399Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="ebxr8sfGb5lm0NN_VdHo" version="21.2.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-04-26T07:28:31.172Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="Y6HOskB3V81do6xobxAj" version="21.2.1" type="github" pages="3">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="1877" dy="577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -307,7 +307,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nkq195g6vkh4-pPKMXvN" name="RT 구성도">
-    <mxGraphModel dx="3054" dy="1938" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4279" dy="2612" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="0_구성도" parent="0" />
@@ -537,35 +537,8 @@
         <mxCell id="-fK0Gv4iXSy3QCoNFZn2-17" value="Json library" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="-430" y="1893" width="60" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="yPTVspk9lqwLESpxl0AY-1" value="Ring Buffer" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="yPTVspk9lqwLESpxl0AY-1" value="Ring Buffer" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="50" y="465" width="60" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="yPTVspk9lqwLESpxl0AY-2" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;receive(data[], size) / read()&lt;/h1&gt;&lt;div&gt;전달된 size만큼 data를 read하는 동작&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="555" width="440" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="yPTVspk9lqwLESpxl0AY-3" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;construct()&lt;/h1&gt;&lt;div&gt;485모듈 index, 통신 baudrate 설정, open()동작, task_create()&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="330" width="440" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="yPTVspk9lqwLESpxl0AY-4" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;getCommand(data[], size)&lt;/h1&gt;&lt;div&gt;기기별 모니터링 cmd중 하나를 선택하고 해당 cmd를 packet으로 구성해서 리턴&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="780" width="540" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="yPTVspk9lqwLESpxl0AY-5" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;makeCommand(enum_cmd_type)&lt;/h1&gt;&lt;div&gt;전달된 cmd_type에 해당하는 cmd를 packet으로 구성해서 리턴&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="840" width="540" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="yPTVspk9lqwLESpxl0AY-6" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;parser()&lt;/h1&gt;&lt;div&gt;receive한 485 data를 parsing하는 동작. 이때 마지막으로 전달한 cmd_type을 가지고 parsing한다. 즉, 내부적으로 getCommand()/makeCommand()시 cmd_type을 저장한다?&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="900" width="540" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="-C6PNh_qHMcCdSNuimvC-1" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;sendCommand(data[]) / sendMessage()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;HL core에 InterCore message를 전달한다. 내부적으로 EnqueueData()이용?&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="660" y="1024" width="490" height="55" as="geometry" />
-        </mxCell>
-        <mxCell id="-C6PNh_qHMcCdSNuimvC-2" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;static void receiverTask()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;HL core로 부터 전달받은 InterCore message를 수신한다.내부적으로 cb호출&lt;/p&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;-&amp;gt; 내부적으로&amp;nbsp;DequeueData()를 호출해서 message를 수신하고 등록된 cb을 통해서 상위 layer에 데이터를 전달한다.&lt;/p&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="660" y="1164" width="490" height="106" as="geometry" />
-        </mxCell>
-        <mxCell id="-C6PNh_qHMcCdSNuimvC-3" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;registerCallbak(cmd_handler_cb)&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;RT core로 부터 전달받은 InterCore message를 parsing하는 cb을 등록&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="660" y="1090" width="490" height="55" as="geometry" />
-        </mxCell>
-        <mxCell id="eQSZSoGPUT3oUdq_tkpj-1" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;최상위 Application으로 Non-Class 구조로 구현? Class형식으로 가능?&lt;/h1&gt;&lt;div&gt;내부적으로 pthread()가 있어야 할거 같고, MQTT/InterCore에 등록한 Callback()에서 해당 pthread()로 message를 전달하고, 해당 pthread에서 message에 따라서 동작하도록&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;즉, MQTT/InterCore CB로 부터 ptheread로 message를 전달하면&lt;/div&gt;&lt;div&gt;내부 MQTT/InterCore 메세지/CMD parser() 호출해서 동작하도록??&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;예를들어서, MQTT sub CB을 통해서 message가 전달되면 해당 MQTT parser()가 호출되고 내부적으로 InterCore를 통해서 해당 cmd를 RT core로 전달?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;align=left;" vertex="1" parent="1">
-          <mxGeometry x="-1030" y="640" width="490" height="280" as="geometry" />
         </mxCell>
         <mxCell id="rneJ1RzEtxrCaaSCAXn--1" value="1_functions" parent="0" />
         <mxCell id="rneJ1RzEtxrCaaSCAXn--2" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;construct()&lt;/h1&gt;&lt;div&gt;기기 Type, HW 인터페이스 타입(UART/I2C)&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" parent="rneJ1RzEtxrCaaSCAXn--1" vertex="1">
@@ -591,6 +564,33 @@
         </mxCell>
         <mxCell id="rneJ1RzEtxrCaaSCAXn--13" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;@ 조명/커튼/... 모두 동일한 Interface로 설계. virtual? impl? 사용해서&lt;/h1&gt;&lt;div&gt;- 내부적으로 각 기기별 protocol CMD/RESP table 존재해야 함&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;fontColor=#FF0000;" parent="rneJ1RzEtxrCaaSCAXn--1" vertex="1">
           <mxGeometry x="640" y="660" width="480" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SOsYK8vz-zOpP49QyFnc-1" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;최상위 Application으로 Non-Class 구조로 구현? Class형식으로 가능?&lt;/h1&gt;&lt;div&gt;내부적으로 task()가 있어야 할거 같고, InterCore에 등록한 Callback()에서 해당 task()로 message를 전달하고, 해당 task에서 message에 따라서 동작하도록&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;즉, InterCore CB로 부터 task로 message를 전달하면&lt;/div&gt;&lt;div&gt;내부 InterCore 메세지/CMD parser() 호출해서 동작하도록??&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;예를들어서, InterCore CB을 통해서 message가 전달되면 해당 InterCore parser()가 호출되고 내부적으로 동작하도록..&lt;/div&gt;&lt;div&gt;즉, InterCore로 부터 조명on커맨드 전달받으면 해당 커맨드를 처리하기 위해서 조명 Dev를 이용해서 makeCommand()호출하고 485모듈을 이용해서 cmd 전송/Resp 동작?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- 내부적으로 Discover된 Dev를 List로 관리&lt;/div&gt;&lt;div&gt;- 기본적으로 Dev를 순차적으로 선택하면서 모니터링 cmd packet 구성하고&lt;/div&gt;&lt;div&gt;cmd/resp동작하도록&lt;/div&gt;&lt;div&gt;- InterCore를 통해서 message전달받으면 내부 requestCMD라는 list에 추가하는 형태?&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;align=left;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="-1020" y="630" width="490" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="SOsYK8vz-zOpP49QyFnc-2" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;receive(data[], size) / read()&lt;/h1&gt;&lt;div&gt;전달된 size만큼 data를 read하는 동작&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="630" y="555" width="440" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SOsYK8vz-zOpP49QyFnc-3" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;construct()&lt;/h1&gt;&lt;div&gt;485모듈 index, 통신 baudrate 설정, open()동작, task_create()&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="630" y="330" width="440" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SOsYK8vz-zOpP49QyFnc-4" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;getCommand(data[], size)&lt;/h1&gt;&lt;div&gt;기기별 모니터링 cmd중 하나를 선택하고 해당 cmd를 packet으로 구성해서 리턴&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="640" y="780" width="540" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SOsYK8vz-zOpP49QyFnc-5" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;makeCommand(enum_cmd_type)&lt;/h1&gt;&lt;div&gt;전달된 cmd_type에 해당하는 cmd를 packet으로 구성해서 리턴&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="640" y="840" width="540" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SOsYK8vz-zOpP49QyFnc-6" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;parser()&lt;/h1&gt;&lt;div&gt;receive한 485 data를 parsing하는 동작. 이때 마지막으로 전달한 cmd_type을 가지고 parsing한다. 즉, 내부적으로 getCommand()/makeCommand()시 cmd_type을 저장한다?&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="640" y="900" width="540" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SOsYK8vz-zOpP49QyFnc-7" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;sendCommand(data[]) / sendMessage()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;HL core에 InterCore message를 전달한다. 내부적으로 EnqueueData()이용?&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="660" y="1024" width="490" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="SOsYK8vz-zOpP49QyFnc-8" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;static void receiverTask()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;HL core로 부터 전달받은 InterCore message를 수신한다.내부적으로 cb호출&lt;/p&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;-&amp;gt; 내부적으로&amp;nbsp;DequeueData()를 호출해서 message를 수신하고 등록된 cb을 통해서 상위 layer에 데이터를 전달한다.&lt;/p&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="660" y="1164" width="490" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="SOsYK8vz-zOpP49QyFnc-9" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;registerCallbak(cmd_handler_cb)&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;RT core로 부터 전달받은 InterCore message를 parsing하는 cb을 등록&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" vertex="1" parent="rneJ1RzEtxrCaaSCAXn--1">
+          <mxGeometry x="660" y="1090" width="490" height="55" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
