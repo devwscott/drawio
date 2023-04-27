@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-27T02:57:51.906Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="rqZ__3b0UXBOSFwoKWmI" version="21.2.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-04-27T02:59:02.757Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="94D7cMYx1TeBn5RrD6sL" version="21.2.1" type="github" pages="3">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="2389" dy="865" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -96,7 +96,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="VZGb3c-POZyq048Ewfn3" name="HL 구성도">
-    <mxGraphModel dx="4434" dy="2250" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4319" dy="2187" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="0_구성도" parent="0" />
@@ -307,7 +307,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="nkq195g6vkh4-pPKMXvN" name="RT 구성도">
-    <mxGraphModel dx="4257" dy="2611" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2904" dy="1861" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="0_구성도" parent="0" />
@@ -540,7 +540,7 @@
         <mxCell id="yPTVspk9lqwLESpxl0AY-1" value="Ring Buffer" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="50" y="465" width="60" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="rneJ1RzEtxrCaaSCAXn--1" value="1_functions" parent="0" />
+        <mxCell id="rneJ1RzEtxrCaaSCAXn--1" value="1_functions" parent="0" visible="0" />
         <mxCell id="rneJ1RzEtxrCaaSCAXn--2" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;construct()&lt;/h1&gt;&lt;div&gt;기기 Type, HW 인터페이스 타입(UART/I2C)&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;strokeWidth=1;" parent="rneJ1RzEtxrCaaSCAXn--1" vertex="1">
           <mxGeometry x="640" y="720" width="440" height="50" as="geometry" />
         </mxCell>
