@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-27T07:02:24.058Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="P-t9crtAvAPnjAlO-SkK" version="21.2.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-04-27T07:14:06.277Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="PGplhbEOvmSJkOYeVrc5" version="21.2.1" type="github" pages="3">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="2780" dy="1081" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -326,28 +326,28 @@
         <mxCell id="DLfRIzrHjdFoQBo3gdAf-142" value="xor&lt;br&gt;sum" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="318" y="1520" width="40" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="DLfRIzrHjdFoQBo3gdAf-143" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- RS485기기 discovery 동작후 응답&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="DLfRIzrHjdFoQBo3gdAf-143" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- RS485기기 discovery 동작후 응답&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="43" y="1230" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="DLfRIzrHjdFoQBo3gdAf-145" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- RS485기기 discovery 동작 요청&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="DLfRIzrHjdFoQBo3gdAf-145" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- RS485기기 discovery 동작 요청&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="-518" y="1230" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="DLfRIzrHjdFoQBo3gdAf-146" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- 조명 on/off 커맨드 전송&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="DLfRIzrHjdFoQBo3gdAf-146" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- 조명 on/off 커맨드 전송&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="-518" y="1490" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="DLfRIzrHjdFoQBo3gdAf-147" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- 조명 on/off 커맨드 응답&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="DLfRIzrHjdFoQBo3gdAf-147" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- 조명 on/off 커맨드 응답&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="44" y="1500" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="DLfRIzrHjdFoQBo3gdAf-148" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- 조명 상태 이벤트&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="DLfRIzrHjdFoQBo3gdAf-148" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- 조명 상태 이벤트&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="42" y="1620" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="DLfRIzrHjdFoQBo3gdAf-149" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- 커튼 on/off 커맨드 전송&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="DLfRIzrHjdFoQBo3gdAf-149" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- 커튼 on/off 커맨드 전송&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="-523" y="1740" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="DLfRIzrHjdFoQBo3gdAf-150" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- 커튼 on/off 커맨드 응답&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="DLfRIzrHjdFoQBo3gdAf-150" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- 커튼 on/off 커맨드 응답&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="42" y="1740" width="210" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="DLfRIzrHjdFoQBo3gdAf-151" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- 커튼 상태 이벤트&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="DLfRIzrHjdFoQBo3gdAf-151" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- 커튼 상태 이벤트&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="42" y="1877" width="210" height="30" as="geometry" />
         </mxCell>
         <mxCell id="DLfRIzrHjdFoQBo3gdAf-152" value="change Mode" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -386,10 +386,10 @@
         <mxCell id="DLfRIzrHjdFoQBo3gdAf-167" value="xor&lt;br&gt;sum" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="320" y="1390" width="40" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="DLfRIzrHjdFoQBo3gdAf-169" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- RT Core 동작모드를 default Discovery에서&amp;nbsp; Normal모드로 Change??&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="DLfRIzrHjdFoQBo3gdAf-169" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- RT Core 동작모드를 default Discovery에서&amp;nbsp; Normal모드로 Change??&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="45" y="1360" width="325" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="DLfRIzrHjdFoQBo3gdAf-170" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- RT Core 동작모드를 default Discovery에서&amp;nbsp; Normal모드로 Change??&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="DLfRIzrHjdFoQBo3gdAf-170" value="&lt;div style=&quot;font-size: 10px;&quot;&gt;- RT Core 동작모드를 default Discovery에서&amp;nbsp; Normal모드로 Change??&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;align=left;fontSize=10;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="-516" y="1360" width="326" height="30" as="geometry" />
         </mxCell>
       </root>
