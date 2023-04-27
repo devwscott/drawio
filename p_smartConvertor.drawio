@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-27T02:36:03.560Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="OI2GSEFU_vcTlBlUDmXp" version="21.2.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-04-27T02:57:51.906Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="rqZ__3b0UXBOSFwoKWmI" version="21.2.1" type="github" pages="3">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="2389" dy="865" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -96,7 +96,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="VZGb3c-POZyq048Ewfn3" name="HL 구성도">
-    <mxGraphModel dx="4125" dy="2080" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4434" dy="2250" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="0_구성도" parent="0" />
@@ -285,14 +285,14 @@
         <mxCell id="EgNj5nqnOxekGAKg0vwN-10" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;unSubscribe(topic[])&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;subscribe한 특정 topic을 구독취소한다.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" parent="AB7R_x14AM-etHOj2O1H-1" vertex="1">
           <mxGeometry y="800" width="490" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="EgNj5nqnOxekGAKg0vwN-11" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;static void syncTask()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;mqtt sync관련 pthread&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" parent="AB7R_x14AM-etHOj2O1H-1" vertex="1">
+        <mxCell id="EgNj5nqnOxekGAKg0vwN-11" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;static void syncTask()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;mqtt sync관련 pthread. 해당 task create시점은? constructor?&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" parent="AB7R_x14AM-etHOj2O1H-1" vertex="1">
           <mxGeometry y="920" width="490" height="55" as="geometry" />
         </mxCell>
         <mxCell id="EgNj5nqnOxekGAKg0vwN-12" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;sendCommand(data[]) / sendMessage()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;RT core에 InterCore message를 전달한다.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" parent="AB7R_x14AM-etHOj2O1H-1" vertex="1">
           <mxGeometry y="1010" width="490" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="EgNj5nqnOxekGAKg0vwN-13" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;static void receiverTask()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;RT core로 부터 전달받은 InterCore message를 수신한다.내부적으로 cb호출&lt;/p&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;-&amp;gt; NonRTOS에서는 대부분 EventLoop_RegisterIo()를 사용하는데 이것을 사용할지? 아니면 CreateEpollFd()를 사용할지 결정? 해야 할듯..&lt;/p&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;-&amp;gt; 위 구조를 사용하면 receiverTask()에서는 해당 EventLoop / Epoll 이벤트 waiting 동작하는 형태이고 EventLoop/Epoll에 등록한 handler에서 처리되도록 해야 할듯...&lt;/p&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" parent="AB7R_x14AM-etHOj2O1H-1" vertex="1">
-          <mxGeometry y="1150" width="490" height="170" as="geometry" />
+        <mxCell id="EgNj5nqnOxekGAKg0vwN-13" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;static void receiverTask()&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;RT core로 부터 전달받은 InterCore message를 수신한다.내부적으로 cb호출&lt;/p&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;-&amp;gt; NonRTOS에서는 대부분 EventLoop_RegisterIo()를 사용하는데 이것을 사용할지? 아니면 CreateEpollFd()를 사용할지 결정? 해야 할듯..&lt;/p&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;-&amp;gt; 위 구조를 사용하면 receiverTask()에서는 해당 EventLoop / Epoll 이벤트 waiting 동작하는 형태이고 EventLoop/Epoll에 등록한 handler에서 처리되도록 해야 할듯...즉, 해당 handler에서 등록된 cb호출하도록?&lt;/p&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;해당 task create시점은? constructor?&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" parent="AB7R_x14AM-etHOj2O1H-1" vertex="1">
+          <mxGeometry y="1130" width="490" height="190" as="geometry" />
         </mxCell>
         <mxCell id="EgNj5nqnOxekGAKg0vwN-14" value="&lt;h1 style=&quot;font-size: 14px;&quot;&gt;registerCallbak(cmd_handler_cb)&lt;/h1&gt;&lt;p style=&quot;font-size: 14px;&quot;&gt;RT core로 부터 전달받은 InterCore message를 parsing하는 cb을 등록&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=14;" parent="AB7R_x14AM-etHOj2O1H-1" vertex="1">
           <mxGeometry y="1070" width="490" height="55" as="geometry" />
