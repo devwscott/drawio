@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-03T03:34:49.315Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="IHbwxzqPN3xK2VLL2TCH" version="21.2.6" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-05-03T03:58:23.169Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="gTbSmTC4QkcOnuwkisYo" version="21.2.6" type="github" pages="5">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="3640" dy="2773" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -779,7 +779,7 @@
         <mxCell id="9IMvolt610lQk0lFnD9d-9" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.884;exitY=0.97;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;exitPerimeter=0;" edge="1" parent="1" source="J4RPk4ZDF1e9-zPzHK8H-7" target="J4RPk4ZDF1e9-zPzHK8H-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="J4RPk4ZDF1e9-zPzHK8H-7" value="Cordinator" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="J4RPk4ZDF1e9-zPzHK8H-7" value="Coordinator" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="-1159.7" y="2400" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="9IMvolt610lQk0lFnD9d-5" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="J4RPk4ZDF1e9-zPzHK8H-8" target="J4RPk4ZDF1e9-zPzHK8H-7">
@@ -864,6 +864,74 @@
             <mxPoint x="-1280" y="2430" as="sourcePoint" />
             <mxPoint x="-1160" y="2430" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="V4WuI3yoc7xpH0qYeE3E" name="HL-ClassDiagram">
+    <mxGraphModel dx="1162" dy="465" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-1" value="Coordinator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="1036" y="641" width="261" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-2" value="-" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-1">
+          <mxGeometry y="26" width="261" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-1">
+          <mxGeometry y="52" width="261" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-4" value="+ Coordinator()&lt;br&gt;+ ~Coordinator()&lt;br&gt;&lt;br&gt;+ connectWifi(apNickName:string) : boolean&lt;br&gt;+&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-1">
+          <mxGeometry y="60" width="261" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-5" value="main.cpp" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="722" y="778" width="160" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-6" value="- coordinator : Coordinator" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-5">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-5">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-8" value="+ main(argc, argv) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-5">
+          <mxGeometry y="60" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-9" value="WifiStation" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="1437" y="610" width="390" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-10" value="-" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-9">
+          <mxGeometry y="26" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-9">
+          <mxGeometry y="52" width="390" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-12" value="+ WifiStation()&lt;br&gt;+ ~WifiStation()&lt;br&gt;+ init(apNickName : string) : boolean&lt;br&gt;+ connect() : boolean&lt;br&gt;+ disconnect() : void&lt;br&gt;+ storeApInfo(ap:string, pskType:int, pw:string, nickName:string) : boolean&lt;br&gt;+ getStatus(bConnected:boolean, ipAddr:string) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-9">
+          <mxGeometry y="60" width="390" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-13" value="MqttClient" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="1437" y="832" width="160" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-14" value="-" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-13">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-13">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-16" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-13">
+          <mxGeometry y="60" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-17" value="InterCoreCommunicator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="1439" y="1032" width="160" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-18" value="-" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-17">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-19" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-17">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-20" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-17">
+          <mxGeometry y="60" width="160" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
