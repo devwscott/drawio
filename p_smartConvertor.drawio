@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-03T03:58:23.169Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="gTbSmTC4QkcOnuwkisYo" version="21.2.6" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2023-05-03T05:22:07.367Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="QGoOy5KP3jcHQEQrXq9L" version="21.2.6" type="github" pages="5">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="3640" dy="2773" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -573,7 +573,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="VZGb3c-POZyq048Ewfn3" name="HL 구성도">
-    <mxGraphModel dx="3683" dy="1553" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3020" dy="1186" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" value="블럭도" parent="0" />
@@ -906,23 +906,23 @@
         <mxCell id="aWeCqE-dectN3Wh3qAc9-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-9">
           <mxGeometry y="52" width="390" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="aWeCqE-dectN3Wh3qAc9-12" value="+ WifiStation()&lt;br&gt;+ ~WifiStation()&lt;br&gt;+ init(apNickName : string) : boolean&lt;br&gt;+ connect() : boolean&lt;br&gt;+ disconnect() : void&lt;br&gt;+ storeApInfo(ap:string, pskType:int, pw:string, nickName:string) : boolean&lt;br&gt;+ getStatus(bConnected:boolean, ipAddr:string) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-9">
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-12" value="+ WifiStation()&lt;br&gt;+ ~WifiStation()&lt;br&gt;+ init() : boolean&lt;br&gt;+ connect() : boolean&lt;br&gt;+ disconnect() : void&lt;br&gt;+ storeApInfo(ap:string, pskType:int, pw:string) : boolean&lt;br&gt;+ getStatus(bConnected:boolean, ipAddr:string) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-9">
           <mxGeometry y="60" width="390" height="125" as="geometry" />
         </mxCell>
         <mxCell id="aWeCqE-dectN3Wh3qAc9-13" value="MqttClient" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
-          <mxGeometry x="1437" y="832" width="160" height="86" as="geometry" />
+          <mxGeometry x="1437" y="864" width="383" height="178" as="geometry" />
         </mxCell>
         <mxCell id="aWeCqE-dectN3Wh3qAc9-14" value="-" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-13">
-          <mxGeometry y="26" width="160" height="26" as="geometry" />
+          <mxGeometry y="26" width="383" height="26" as="geometry" />
         </mxCell>
         <mxCell id="aWeCqE-dectN3Wh3qAc9-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-13">
-          <mxGeometry y="52" width="160" height="8" as="geometry" />
+          <mxGeometry y="52" width="383" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="aWeCqE-dectN3Wh3qAc9-16" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-13">
-          <mxGeometry y="60" width="160" height="26" as="geometry" />
+        <mxCell id="aWeCqE-dectN3Wh3qAc9-16" value="+ MqttClient(callback:IMqttClientListener)&lt;br&gt;+ ~MqttClient()&lt;br&gt;+ init(broker:string, bTLS:boolean) : boolean&amp;nbsp; &amp;nbsp; &amp;nbsp;??&lt;br&gt;+ connect(broker:string, cert:string) : boolean&lt;br&gt;+ subscribe(topic:string) : boolean&lt;br&gt;+ unSubscribe(topic:string) :&amp;nbsp;&lt;br&gt;+ publish(data:string, length:int) : boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-13">
+          <mxGeometry y="60" width="383" height="118" as="geometry" />
         </mxCell>
         <mxCell id="aWeCqE-dectN3Wh3qAc9-17" value="InterCoreCommunicator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
-          <mxGeometry x="1439" y="1032" width="160" height="86" as="geometry" />
+          <mxGeometry x="1437" y="1098" width="160" height="86" as="geometry" />
         </mxCell>
         <mxCell id="aWeCqE-dectN3Wh3qAc9-18" value="-" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-17">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
@@ -932,6 +932,9 @@
         </mxCell>
         <mxCell id="aWeCqE-dectN3Wh3qAc9-20" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="aWeCqE-dectN3Wh3qAc9-17">
           <mxGeometry y="60" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="BE7GvCOTB8ZrEGYiWVLY-1" value="class Coordinator {&lt;br&gt;&lt;br&gt;private:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;WifiStation *m_wifistation = null;&lt;br&gt;&lt;br&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;Coordinator();&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;~Coordinator();&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;connectWifi() : boolean	&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;&lt;br&gt;};&lt;br&gt;&lt;br&gt;Coordinator::Coordinator() {&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;m_wifistation = new WifiStation();&lt;br&gt;}&lt;br&gt;&lt;br&gt;Coordinator::connectWifi() {&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;tm_wifistation-&amp;gt;connect();&lt;br&gt;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="1033" y="921" width="251" height="279" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
