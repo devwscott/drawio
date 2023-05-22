@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-22T02:14:28.588Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="w01R2983DZ_U_g_Pj7Pb" version="21.3.2" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2023-05-22T02:39:32.307Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="_zz3hbK5xYyvD9CNr4Dm" version="21.3.2" type="github" pages="9">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="2362" dy="2065" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1455,7 +1455,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="iMEITMDCuTk2jDnLHP7V" name="Parser">
-    <mxGraphModel dx="4778" dy="4136" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3142" dy="3194" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1585,16 +1585,16 @@
         <mxCell id="9c4-QGc0ng165Z2nWqPi-38" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-36">
           <mxGeometry y="70" width="360" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="9c4-QGc0ng165Z2nWqPi-39" value="+ MQTTMessage(topic:string&amp;amp;, payload:map&amp;amp;&amp;lt;string,string&amp;gt;&lt;br&gt;+ getTopic() : string&lt;br&gt;+ getPayload() : map&amp;lt;string, string&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-36">
+        <mxCell id="9c4-QGc0ng165Z2nWqPi-39" value="+ MQTTMessage(topic:string&amp;amp;, payload:map&amp;amp;&amp;lt;string,string&amp;gt;&lt;br&gt;+ getTopic() : string&lt;br&gt;+ getPayload() : map&amp;lt;string, string&amp;gt;&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ toJson() : string&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-36">
           <mxGeometry y="78" width="360" height="72" as="geometry" />
         </mxCell>
-        <mxCell id="9c4-QGc0ng165Z2nWqPi-40" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&lt;b&gt;MQTTMessageDecoder&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ decode(message:string&amp;amp;) : MQTTMessage*&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="9c4-QGc0ng165Z2nWqPi-40" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&lt;b&gt;MQTTMessageEncoder&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ decode(message:string&amp;amp;) : MQTTMessage*&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ encode(payload:map&amp;amp;&amp;lt;string,string&amp;gt;) : MQTTMessage*&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="30" y="-710" width="360" height="95" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-41" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="9c4-QGc0ng165Z2nWqPi-42" target="9c4-QGc0ng165Z2nWqPi-40">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="9c4-QGc0ng165Z2nWqPi-42" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&lt;b&gt;MQTTMessageDecoderFactory&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ createDecoder(topic:string&amp;amp;) : MQTTMessageDecoder*&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="9c4-QGc0ng165Z2nWqPi-42" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&lt;b&gt;MQTTMessageEncoderFactory&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ createDecoder(topic:string&amp;amp;) : MQTTMessageDecoder*&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ createEncoder(topic:string&amp;amp;) : MQTTMessageEncoder*&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="-800" y="-900" width="360" height="95" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-43" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0.067;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="9c4-QGc0ng165Z2nWqPi-48" target="9c4-QGc0ng165Z2nWqPi-40">
@@ -1603,7 +1603,7 @@
             <mxPoint x="1270" y="-328" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9c4-QGc0ng165Z2nWqPi-44" value="MQTTMessageDecoderFactoryImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="9c4-QGc0ng165Z2nWqPi-44" value="MQTTMessageEncoderFactoryImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-830" y="-670" width="420" height="150" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-45" value="-&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-44">
@@ -1612,32 +1612,32 @@
         <mxCell id="9c4-QGc0ng165Z2nWqPi-46" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-44">
           <mxGeometry y="70" width="420" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="9c4-QGc0ng165Z2nWqPi-47" value="+ createDecoder(topic:string&amp;amp;) : MQTTMessageDecoder*&amp;nbsp; override" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-44">
+        <mxCell id="9c4-QGc0ng165Z2nWqPi-47" value="+ createDecoder(topic:string&amp;amp;) : MQTTMessageDecoder*&amp;nbsp; override&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ createEncoder(topic:string&amp;amp;) : MQTTMessageEncoder* override&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-44">
           <mxGeometry y="78" width="420" height="72" as="geometry" />
         </mxCell>
-        <mxCell id="9c4-QGc0ng165Z2nWqPi-48" value="LightDecoder" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-420" y="-340" width="360" height="150" as="geometry" />
+        <mxCell id="9c4-QGc0ng165Z2nWqPi-48" value="LightEncoder" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-420" y="-340" width="380" height="150" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-49" value="-&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-48">
-          <mxGeometry y="26" width="360" height="44" as="geometry" />
+          <mxGeometry y="26" width="380" height="44" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-50" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-48">
-          <mxGeometry y="70" width="360" height="8" as="geometry" />
+          <mxGeometry y="70" width="380" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="9c4-QGc0ng165Z2nWqPi-51" value="+ decode(message:string&amp;amp;) : MQTTMessage*&amp;nbsp; override" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-48">
-          <mxGeometry y="78" width="360" height="72" as="geometry" />
+        <mxCell id="9c4-QGc0ng165Z2nWqPi-51" value="+ decode(message:string&amp;amp;) : MQTTMessage*&amp;nbsp; override&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ encode(payload:map&amp;amp;&amp;lt;string,string&amp;gt;) : MQTTMessage* override&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-48">
+          <mxGeometry y="78" width="380" height="72" as="geometry" />
         </mxCell>
-        <mxCell id="9c4-QGc0ng165Z2nWqPi-52" value="CurtainDecoder" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="-340" width="360" height="150" as="geometry" />
+        <mxCell id="9c4-QGc0ng165Z2nWqPi-52" value="CurtainEncoder" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="-340" width="370" height="150" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-53" value="-&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-52">
-          <mxGeometry y="26" width="360" height="44" as="geometry" />
+          <mxGeometry y="26" width="370" height="44" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-54" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-52">
-          <mxGeometry y="70" width="360" height="8" as="geometry" />
+          <mxGeometry y="70" width="370" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="9c4-QGc0ng165Z2nWqPi-55" value="+ decode(message:string&amp;amp;) : MQTTMessage*&amp;nbsp; override" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-52">
-          <mxGeometry y="78" width="360" height="72" as="geometry" />
+        <mxCell id="9c4-QGc0ng165Z2nWqPi-55" value="+ decode(message:string&amp;amp;) : MQTTMessage*&amp;nbsp; override&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ encode(payload:map&amp;amp;&amp;lt;string,string&amp;gt;) : MQTTMessage* override&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-52">
+          <mxGeometry y="78" width="370" height="72" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-56" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="9c4-QGc0ng165Z2nWqPi-52" target="9c4-QGc0ng165Z2nWqPi-40">
           <mxGeometry width="160" relative="1" as="geometry">
@@ -1655,16 +1655,16 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-59" value="main.cpp" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
-          <mxGeometry x="-1250" y="-780" width="250" height="86" as="geometry" />
+          <mxGeometry x="-1250" y="-780" width="250" height="104" as="geometry" />
         </mxCell>
-        <mxCell id="9c4-QGc0ng165Z2nWqPi-60" value="- mqttDecoder : MQTTMessageDecoderFactory" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-59">
-          <mxGeometry y="26" width="250" height="26" as="geometry" />
+        <mxCell id="9c4-QGc0ng165Z2nWqPi-60" value="- mqttDecoder : MQTTMessageDecoderFactory&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;- mqttEncoder : MQTTMessageEncoderFactory&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-59">
+          <mxGeometry y="26" width="250" height="44" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-61" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-59">
-          <mxGeometry y="52" width="250" height="8" as="geometry" />
+          <mxGeometry y="70" width="250" height="8" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-62" value="+ main(argc, argv) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-59">
-          <mxGeometry y="60" width="250" height="26" as="geometry" />
+          <mxGeometry y="78" width="250" height="26" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-63" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="9c4-QGc0ng165Z2nWqPi-40" target="9c4-QGc0ng165Z2nWqPi-36">
           <mxGeometry relative="1" as="geometry">
@@ -1672,17 +1672,17 @@
             <mxPoint x="1040" y="-424" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9c4-QGc0ng165Z2nWqPi-64" value="GasDecoder" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="460" y="-340" width="360" height="150" as="geometry" />
+        <mxCell id="9c4-QGc0ng165Z2nWqPi-64" value="GasEncoder" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="-340" width="370" height="150" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-65" value="-&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-64">
-          <mxGeometry y="26" width="360" height="44" as="geometry" />
+          <mxGeometry y="26" width="370" height="44" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-66" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-64">
-          <mxGeometry y="70" width="360" height="8" as="geometry" />
+          <mxGeometry y="70" width="370" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="9c4-QGc0ng165Z2nWqPi-67" value="+ decode(message:string&amp;amp;) : MQTTMessage*&amp;nbsp; override" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-64">
-          <mxGeometry y="78" width="360" height="72" as="geometry" />
+        <mxCell id="9c4-QGc0ng165Z2nWqPi-67" value="+ decode(message:string&amp;amp;) : MQTTMessage*&amp;nbsp; override&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ encode(payload:map&amp;amp;&amp;lt;string,string&amp;gt;) : MQTTMessage* override&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9c4-QGc0ng165Z2nWqPi-64">
+          <mxGeometry y="78" width="370" height="72" as="geometry" />
         </mxCell>
         <mxCell id="9c4-QGc0ng165Z2nWqPi-68" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="9c4-QGc0ng165Z2nWqPi-64" target="9c4-QGc0ng165Z2nWqPi-40">
           <mxGeometry width="160" relative="1" as="geometry">
@@ -1722,7 +1722,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="_(1)Parser" id="31I4CqRneCWO9d7HyqCw">
-    <mxGraphModel dx="4778" dy="2967" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3731" dy="1888" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="9X4YrfVrGWDHbrTyHEu1-0" />
         <mxCell id="9X4YrfVrGWDHbrTyHEu1-1" parent="9X4YrfVrGWDHbrTyHEu1-0" />
@@ -1822,7 +1822,7 @@
         <mxCell id="9X4YrfVrGWDHbrTyHEu1-29" value="+ main(argc, argv) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="9X4YrfVrGWDHbrTyHEu1-26">
           <mxGeometry y="60" width="220" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="9X4YrfVrGWDHbrTyHEu1-30" value="code" visible="0" parent="9X4YrfVrGWDHbrTyHEu1-0" />
+        <mxCell id="9X4YrfVrGWDHbrTyHEu1-30" value="code" parent="9X4YrfVrGWDHbrTyHEu1-0" />
         <mxCell id="9X4YrfVrGWDHbrTyHEu1-31" value="#ifndef MQTTMESSAGE_H&#xa;#define MQTTMESSAGE_H&#xa;&#xa;&#xa;#include &lt;string&gt;&#xa;#include &lt;unordered_map&gt;&#xa;&#xa;&#xa;class MQTTMessage {&#xa;private:&#xa;    std::string topic_;&#xa;    std::unordered_map&lt;std::string, std::string&gt; payload_;&#xa;&#xa;&#xa;public:&#xa;    MQTTMessage(const std::string&amp; topic, const std::unordered_map&lt;std::string, std::string&gt;&amp; payload)&#xa;        : topic_(topic), payload_(payload) {}&#xa;&#xa;&#xa;    std::string getTopic() const {&#xa;        return topic_;&#xa;    }&#xa;&#xa;&#xa;    std::unordered_map&lt;std::string, std::string&gt; getPayload() const {&#xa;        return payload_;&#xa;    }&#xa;};&#xa;&#xa;&#xa;#endif  // MQTTMESSAGE_H" style="text;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="9X4YrfVrGWDHbrTyHEu1-30">
           <mxGeometry x="760" y="-805" width="460" height="470" as="geometry" />
         </mxCell>
