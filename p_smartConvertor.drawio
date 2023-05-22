@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-22T00:38:19.006Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="RWV-uD27pV2uUTWza46O" version="21.3.2" type="github" pages="9">
+<mxfile host="app.diagrams.net" modified="2023-05-22T00:56:51.562Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="AyxljRU3Dg95DTH79Al_" version="21.3.2" type="github" pages="9">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="2362" dy="2065" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -738,7 +738,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="V4WuI3yoc7xpH0qYeE3E" name="HL-ClassDiagram">
-    <mxGraphModel dx="1831" dy="1236" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4807" dy="2997" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -903,23 +903,84 @@
           <mxGeometry x="561" y="1760" width="318" height="299" as="geometry" />
         </mxCell>
         <mxCell id="Tfa3cE8oXl4zY9cdbMLS-1" value="Q&amp;A-impl" parent="0" />
-        <mxCell id="Tfa3cE8oXl4zY9cdbMLS-3" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;[Q] mbedtls_context struct 위치&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;mbedtls_context struct를 MqttClient.cpp에 정의했는데,&lt;br&gt;class의 private영역에 위치시켜야 할지?&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="Tfa3cE8oXl4zY9cdbMLS-1" vertex="1">
-          <mxGeometry x="1909" y="955" width="398" height="81" as="geometry" />
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-53" value="&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div&gt;=&amp;gt;[A] 기존 유지 가능. 해당 내용을 유저에게 open하지 않을경우&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Tfa3cE8oXl4zY9cdbMLS-1">
+          <mxGeometry x="3531" y="920.5" width="398" height="115" as="geometry" />
         </mxCell>
-        <mxCell id="Tfa3cE8oXl4zY9cdbMLS-4" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;[Q] connect() 오버로딩 : Mqtt only, Mqtt+mbedtls&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;mqtt only와 mqtt+mbedtls용 connect()를 추가한상태이고&lt;br&gt;각 내부 코드를 #ifdef (MQTT_USE_MBEDTLS)로 구분하였는데&lt;br&gt;이런식으로 구현하는 것이 맞나?&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="Tfa3cE8oXl4zY9cdbMLS-1" vertex="1">
-          <mxGeometry x="1909" y="1060" width="398" height="97" as="geometry" />
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-54" value="&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div&gt;=&amp;gt; [A] 해당 define에 dependency가 있어서 어쩔수 없을듯 하다.&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;하지만, 오버로딩으로 제공되는 connect()API가 해당 define에 따라 동작 여부가 결정되기 때문에 해당 내용은 *.h에 doxyen으로 설명추가하는 방식으로 릴리즈하게 되면 해야 한다.&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;-&amp;gt; 보통 라이브러리들이 *.h파일에 상세 desc를 기술한다.&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Tfa3cE8oXl4zY9cdbMLS-1">
+          <mxGeometry x="3528" y="1059.5" width="398" height="134" as="geometry" />
         </mxCell>
-        <mxCell id="Tfa3cE8oXl4zY9cdbMLS-5" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;[Q] _open_nb_socket() 오버로딩 : Mqtt only, Mqtt+mbedtls&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;mqtt only와 mqtt+mbedtls용 _open_nb_socket()을 class의 private영역에 non-static함수로 정의했는데&lt;br&gt;해당 함수는 connect()함수에서 내부적으로 사용되는 함수로 C언어의 static 함수와 같은 역할?인데.. class의 private영역에 위치하는 것이 맞는지?&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="Tfa3cE8oXl4zY9cdbMLS-1" vertex="1">
-          <mxGeometry x="1909" y="1181" width="473" height="119" as="geometry" />
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-55" value="&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div&gt;=&amp;gt; 맴버변수 접근이 있는상태면 class private로....&lt;br&gt;&lt;/div&gt;&lt;div&gt;즉, 해당 함수내부에서 class맴버 변수를 사용하는 코드가 있는경우&lt;/div&gt;&lt;div&gt;class private:영역에 위치시켜야 한다.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Tfa3cE8oXl4zY9cdbMLS-1">
+          <mxGeometry x="3536" y="1183.5" width="473" height="119" as="geometry" />
         </mxCell>
-        <mxCell id="Tfa3cE8oXl4zY9cdbMLS-6" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;[Q] _open_nb_socket() for Mqtt+mbedtls&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;mqtt+mbedtls용 _open_nb_socket()함수에서 내부적으로 C언어의 static함수와 같은 개념의 failed()/cert_verify_failed()함수를 사용하는데&lt;br&gt;해당 함수도 class의 private영역에 위치시켜야 하는지?&lt;br&gt;현재는 class에 추가하지 않고 cpp파일에 함수만 정의해서 사용하도록 한 상태임&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="Tfa3cE8oXl4zY9cdbMLS-1" vertex="1">
-          <mxGeometry x="1914" y="1324" width="473" height="119" as="geometry" />
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-56" value="&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;=&amp;gt; [A] C 스타일의 static 함수처럼 정의해서 사용은 가능하지만&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;Cpp에서 무조건 class에 정의해서 사용하도록 하는 것이 좋다.&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;이후 해당 class를 부모 class로 해서 자식이 상속하는 것을 고려할때를 대비해서?&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;즉, 현재 구현된 MqttClient를 부모 class로 하고 자식이 상속받는 것을 구현할때..&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;해당 class private영역을 자식 class에 위치시키도록??&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;즉, 오른쪽 처럼, MqttClient 부모 class를 상속받아서 공통 pub 함수는 상속받고&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;priv맴버함수를 추가로 정의해서 사용?하는 구조로 변경할 경우,&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;class private:영역의 맴버함수를 정의해서 구조화가 쉽기 때문에???&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;--&amp;gt; 이때 부모 class의 맴버함수를 virtual또는 오버로딩으로 다른점을 자식 class에서&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;재정의 해서 사용??&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Tfa3cE8oXl4zY9cdbMLS-1">
+          <mxGeometry x="3540" y="1306" width="473" height="198" as="geometry" />
         </mxCell>
-        <mxCell id="Tfa3cE8oXl4zY9cdbMLS-8" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;[Q] _entropy_pluton_source() for Mqtt+mbedtls&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;해당 함수는 아래와 같이 mbedtls_entropy_add_source()함수로 등록하는 함수인데,&lt;br&gt;&lt;/p&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 13px; line-height: 18px;&quot;&gt;mbedtls_entropy_add_source(&lt;span style=&quot;color: #9cdcfe;&quot;&gt;entropy&lt;/span&gt;, &lt;span style=&quot;color: #dcdcaa;&quot;&gt;_entropy_pluton_source&lt;/span&gt;,&lt;/div&gt;&lt;p&gt;해당 함수도 pthread handler처럼 class의 private영역에 static 맴버함수로 정의해야 하나?&lt;/p&gt;&lt;p&gt;현재는 cpp파일에 정의해서 동작하도록 한 상태이고 동작? 하는듯 한데..&lt;br&gt;내부적으로 mbedtls_entropy_add_source()함수 내부에서 class의 m_mbedtls_ctx에&amp;nbsp; 해당 콜백?을 등록하도록 되어있는 상태여서 private static이 아니더라도 동작을 하는 것 같은데..&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="Tfa3cE8oXl4zY9cdbMLS-1" vertex="1">
-          <mxGeometry x="1914" y="1472" width="473" height="211" as="geometry" />
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-57" value="&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;=&amp;gt; 맴버변수 접근이 있는상태면 class private로....&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;즉, 해당 함수내부에서 class맴버 변수를 사용하는 코드가 있는경우&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;class private:영역에 위치시켜야 한다.&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Tfa3cE8oXl4zY9cdbMLS-1">
+          <mxGeometry x="3544" y="1519.5" width="473" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="Tfa3cE8oXl4zY9cdbMLS-9" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;[Q] SecurityType enum 위치&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;WPA2PSK관련 SecurityType enum을 class public영역에 정의해서 사용하도록 하였는데 이런식으로 사용??&lt;/p&gt;&lt;p&gt;해당 SecurityType을 아래 storeAPInfo()의 param으로 사용중&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 13px; line-height: 18px;&quot;&gt;bool &lt;span style=&quot;color: #dcdcaa;&quot;&gt;storeAPInfo&lt;/span&gt;(&lt;span style=&quot;color: #4ec9b0;&quot;&gt;string&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe;&quot;&gt;ssid&lt;/span&gt;, &lt;span style=&quot;color: #4ec9b0;&quot;&gt;SecurityType&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe;&quot;&gt;secType&lt;/span&gt;, &lt;span style=&quot;color: #4ec9b0;&quot;&gt;string&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe;&quot;&gt;passwd&lt;/span&gt;);&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="Tfa3cE8oXl4zY9cdbMLS-1" vertex="1">
-          <mxGeometry x="1892" y="548" width="589" height="151" as="geometry" />
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-58" value="&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div&gt;=&amp;gt;[A] 기존 유지 가능. 해당 내용을 유저에게 open하지 않을경우&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Tfa3cE8oXl4zY9cdbMLS-1">
+          <mxGeometry x="3651" y="794" width="589" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Tfa3cE8oXl4zY9cdbMLS-1" source="BeHH5CfodkofJS-AQ2MA-60" target="BeHH5CfodkofJS-AQ2MA-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-60" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;[Q] mbedtls_context struct 위치&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;mbedtls_context struct를 MqttClient.cpp에 정의했는데,&lt;br&gt;class의 private영역에 위치시켜야 할지?&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Tfa3cE8oXl4zY9cdbMLS-1">
+          <mxGeometry x="2986" y="928.5" width="398" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Tfa3cE8oXl4zY9cdbMLS-1" source="BeHH5CfodkofJS-AQ2MA-62" target="BeHH5CfodkofJS-AQ2MA-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-62" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;[Q] connect() 오버로딩 : Mqtt only, Mqtt+mbedtls&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;mqtt only와 mqtt+mbedtls용 connect()를 추가한상태이고&lt;br&gt;각 내부 코드를 #ifdef (MQTT_USE_MBEDTLS)로 구분하였는데&lt;br&gt;이런식으로 구현하는 것이 맞나?&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Tfa3cE8oXl4zY9cdbMLS-1">
+          <mxGeometry x="2983" y="1062.5" width="398" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Tfa3cE8oXl4zY9cdbMLS-1" source="BeHH5CfodkofJS-AQ2MA-64" target="BeHH5CfodkofJS-AQ2MA-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-64" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;[Q] _open_nb_socket() 오버로딩 : Mqtt only, Mqtt+mbedtls&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;mqtt only와 mqtt+mbedtls용 _open_nb_socket()을 class의 private영역에 non-static함수로 정의했는데&lt;br&gt;해당 함수는 connect()함수에서 내부적으로 사용되는 함수로 C언어의 static 함수와 같은 역할?인데.. class의 private영역에 위치하는 것이 맞는지?&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Tfa3cE8oXl4zY9cdbMLS-1">
+          <mxGeometry x="2983" y="1183.5" width="473" height="119" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Tfa3cE8oXl4zY9cdbMLS-1" source="BeHH5CfodkofJS-AQ2MA-66" target="BeHH5CfodkofJS-AQ2MA-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-66" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;[Q] _open_nb_socket() for Mqtt+mbedtls&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;mqtt+mbedtls용 _open_nb_socket()함수에서 내부적으로 C언어의 static함수와 같은 개념의 failed()/cert_verify_failed()함수를 사용하는데&lt;br&gt;해당 함수도 class의 private영역에 위치시켜야 하는지?&lt;br&gt;현재는 class에 추가하지 않고 cpp파일에 함수만 정의해서 사용하도록 한 상태임&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Tfa3cE8oXl4zY9cdbMLS-1">
+          <mxGeometry x="2988" y="1326.5" width="473" height="119" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Tfa3cE8oXl4zY9cdbMLS-1" source="BeHH5CfodkofJS-AQ2MA-68" target="BeHH5CfodkofJS-AQ2MA-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-68" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;[Q] _entropy_pluton_source() for Mqtt+mbedtls&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;해당 함수는 아래와 같이 mbedtls_entropy_add_source()함수로 등록하는 함수인데,&lt;br&gt;&lt;/p&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 13px; line-height: 18px;&quot;&gt;mbedtls_entropy_add_source(&lt;span style=&quot;color: #9cdcfe;&quot;&gt;entropy&lt;/span&gt;, &lt;span style=&quot;color: #dcdcaa;&quot;&gt;_entropy_pluton_source&lt;/span&gt;,&lt;/div&gt;&lt;p&gt;해당 함수도 pthread handler처럼 class의 private영역에 static 맴버함수로 정의해야 하나?&lt;/p&gt;&lt;p&gt;현재는 cpp파일에 정의해서 동작하도록 한 상태이고 동작? 하는듯 한데..&lt;br&gt;내부적으로 mbedtls_entropy_add_source()함수 내부에서 class의 m_mbedtls_ctx에&amp;nbsp; 해당 콜백?을 등록하도록 되어있는 상태여서 private static이 아니더라도 동작을 하는 것 같은데..&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Tfa3cE8oXl4zY9cdbMLS-1">
+          <mxGeometry x="2988" y="1474.5" width="473" height="211" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-69" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Tfa3cE8oXl4zY9cdbMLS-1" source="BeHH5CfodkofJS-AQ2MA-70" target="BeHH5CfodkofJS-AQ2MA-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-70" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;[Q] SecurityType enum 위치&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;WPA2PSK관련 SecurityType enum을 class public영역에 정의해서 사용하도록 하였는데 이런식으로 사용??&lt;/p&gt;&lt;p&gt;해당 SecurityType을 아래 storeAPInfo()의 param으로 사용중&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 13px; line-height: 18px;&quot;&gt;bool &lt;span style=&quot;color: #dcdcaa;&quot;&gt;storeAPInfo&lt;/span&gt;(&lt;span style=&quot;color: #4ec9b0;&quot;&gt;string&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe;&quot;&gt;ssid&lt;/span&gt;, &lt;span style=&quot;color: #4ec9b0;&quot;&gt;SecurityType&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe;&quot;&gt;secType&lt;/span&gt;, &lt;span style=&quot;color: #4ec9b0;&quot;&gt;string&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe;&quot;&gt;passwd&lt;/span&gt;);&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="Tfa3cE8oXl4zY9cdbMLS-1">
+          <mxGeometry x="2980" y="756" width="589" height="188" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-71" value="MqttClient" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="Tfa3cE8oXl4zY9cdbMLS-1">
+          <mxGeometry x="4091" y="1148" width="383" height="204" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-73" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="BeHH5CfodkofJS-AQ2MA-71">
+          <mxGeometry y="26" width="383" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-74" value="+ MqttClient(callback:IMqttClientListener*)&lt;br&gt;+ ~MqttClient()&lt;br&gt;+ init(qoslevel:int, keepAliveTime:int) : bool&lt;br&gt;+ connect(broker:const string&amp;amp;, port:const string&amp;amp;) : bool&lt;br&gt;+ connect(broker:const string&amp;amp;, port:const string&amp;amp;, cert:const string&amp;amp;) : bool&lt;br&gt;+ disConnect() : void&lt;br&gt;+ subscribe(topic:string&amp;amp;) : bool&lt;br&gt;+ unSubscribe(topic:string&amp;amp;) :&amp;nbsp;&lt;br&gt;+ publish(topic:string&amp;amp;, msg:string&amp;amp;) : bool&lt;br&gt;&lt;br&gt;- __syncThread__(arg:void*) : void*&lt;br&gt;- __subscribe_callback__(arg:void**, published:mqtt_response_publish)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="BeHH5CfodkofJS-AQ2MA-71">
+          <mxGeometry y="34" width="383" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-75" value="MqttClient_xxx" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="Tfa3cE8oXl4zY9cdbMLS-1">
+          <mxGeometry x="4091" y="1439" width="383" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-76" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="BeHH5CfodkofJS-AQ2MA-75">
+          <mxGeometry y="26" width="383" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-77" value="- failed()&lt;br&gt;- cert_verity_failed()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="BeHH5CfodkofJS-AQ2MA-75">
+          <mxGeometry y="34" width="383" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="BeHH5CfodkofJS-AQ2MA-79" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="Tfa3cE8oXl4zY9cdbMLS-1" source="BeHH5CfodkofJS-AQ2MA-75" target="BeHH5CfodkofJS-AQ2MA-74">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4647" y="1427" as="sourcePoint" />
+            <mxPoint x="4944" y="1116" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
