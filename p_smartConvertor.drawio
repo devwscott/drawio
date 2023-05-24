@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-24T08:58:39.020Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="mwaUKjmSPQx512VjveI0" version="21.3.3" type="github" pages="11">
+<mxfile host="app.diagrams.net" modified="2023-05-24T09:05:21.531Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="a8WFFgbZI1OLcAZkPL3g" version="21.3.3" type="github" pages="11">
   <diagram name="전체구성도" id="XRAYTFl4DLJTWomTeaKg">
     <mxGraphModel dx="2362" dy="2065" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1454,8 +1454,245 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="iMEITMDCuTk2jDnLHP7V" name="Parser">
-    <mxGraphModel dx="6117" dy="4809" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram name="Parser" id="jehH3IPVBT5-vJIcJAir">
+    <mxGraphModel dx="4057" dy="2500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-0" />
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-1" parent="uK2bDwmYoRoU14FmoIUb-0" />
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-70" value="MQTTMessage" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
+          <mxGeometry x="1440" y="680" width="360" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-71" value="# m_topic : string&lt;br&gt;# m_payload : map&amp;lt;string, string&amp;gt;&lt;br&gt;# m_jsonstr : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-70">
+          <mxGeometry y="26" width="360" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-72" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-70">
+          <mxGeometry y="76" width="360" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-73" value="+ MQTTMessage(topic:string&amp;amp;, payload:map&amp;amp;&amp;lt;string,string&amp;gt;)&lt;br&gt;+ MQTTMessage(topic:string&amp;amp;, payload string&amp;amp;)&lt;br&gt;+ getTopic() : string&lt;br&gt;+ getPayload() : map&amp;lt;string, string&amp;gt;&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ toJson() : string&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-70">
+          <mxGeometry y="84" width="360" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-74" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&lt;b&gt;MQTTMessageCodec&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;strike&gt;+ mtopic : string&lt;/strike&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ decode(message:string&amp;amp;) : MQTTMessage*&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ encode(payload:map&amp;amp;&amp;lt;string,string&amp;gt;) : MQTTMessage*&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
+          <mxGeometry x="40" y="520" width="360" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-75" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="uK2bDwmYoRoU14FmoIUb-76" target="uK2bDwmYoRoU14FmoIUb-74">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-76" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&lt;b&gt;MQTTMessageCodecFactory&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ createDecoder(topic:string&amp;amp;) : MQTTMessageDecoder*&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ createEncoder(topic:string&amp;amp;) : MQTTMessageEncoder*&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ createCodec(topic:string&amp;amp;) : MQTTMessageCodec*&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
+          <mxGeometry x="-790" y="330" width="360" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-77" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0.067;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="uK2bDwmYoRoU14FmoIUb-82" target="uK2bDwmYoRoU14FmoIUb-74">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="470" y="940" as="sourcePoint" />
+            <mxPoint x="1280" y="902" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-78" value="MQTTMessageCodecFactoryImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
+          <mxGeometry x="-820" y="560" width="420" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-79" value="-&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-78">
+          <mxGeometry y="26" width="420" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-80" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-78">
+          <mxGeometry y="70" width="420" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-81" value="+ createDecoder(topic:string&amp;amp;) : MQTTMessageDecoder*&amp;nbsp; override&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ createEncoder(topic:string&amp;amp;) : MQTTMessageEncoder* override&lt;br&gt;&lt;br&gt;+ createCodec(topic:string&amp;amp;) : MQTTMessageCodec* override&lt;br&gt;&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-78">
+          <mxGeometry y="78" width="420" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-82" value="LightCodec" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
+          <mxGeometry x="-410" y="890" width="380" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-83" value="- m_topic:string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-82">
+          <mxGeometry y="26" width="380" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-84" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-82">
+          <mxGeometry y="70" width="380" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-85" value="+ decode(message:string&amp;amp;) : MQTTMessage*&amp;nbsp; override&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ encode(payload:map&amp;amp;&amp;lt;string,string&amp;gt;) : MQTTMessage* override&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-82">
+          <mxGeometry y="78" width="380" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-86" value="CurtainCodec" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
+          <mxGeometry x="30" y="890" width="370" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-87" value="- m_topic:string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-86">
+          <mxGeometry y="26" width="370" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-88" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-86">
+          <mxGeometry y="70" width="370" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-89" value="+ decode(message:string&amp;amp;) : MQTTMessage*&amp;nbsp; override&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ encode(payload:map&amp;amp;&amp;lt;string,string&amp;gt;) : MQTTMessage* override&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-86">
+          <mxGeometry y="78" width="370" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-90" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="uK2bDwmYoRoU14FmoIUb-86" target="uK2bDwmYoRoU14FmoIUb-74">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-10" y="980" as="sourcePoint" />
+            <mxPoint x="218" y="763" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-91" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="uK2bDwmYoRoU14FmoIUb-78" target="uK2bDwmYoRoU14FmoIUb-76">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-400" y="70" as="sourcePoint" />
+            <mxPoint x="-600" y="-135" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="uK2bDwmYoRoU14FmoIUb-93" target="uK2bDwmYoRoU14FmoIUb-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-93" value="main.cpp" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
+          <mxGeometry x="-1240" y="450" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-94" value="- mqttDecoder : MQTTMessageDecoderFactory&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;- mqttEncoder : MQTTMessageEncoderFactory&lt;br&gt;&lt;br&gt;- mqttCodec : MQTTMessageCodecFactory&lt;br&gt;&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-93">
+          <mxGeometry y="26" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-95" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-93">
+          <mxGeometry y="86" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-96" value="+ main(argc, argv) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-93">
+          <mxGeometry y="94" width="250" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-97" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="uK2bDwmYoRoU14FmoIUb-74" target="uK2bDwmYoRoU14FmoIUb-70">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="670" as="sourcePoint" />
+            <mxPoint x="1050" y="806" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-98" value="GasCodec" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
+          <mxGeometry x="470" y="890" width="370" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-99" value="- m_topic:string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-98">
+          <mxGeometry y="26" width="370" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-100" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-98">
+          <mxGeometry y="70" width="370" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-101" value="+ decode(message:string&amp;amp;) : MQTTMessage*&amp;nbsp; override&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ encode(payload:map&amp;amp;&amp;lt;string,string&amp;gt;) : MQTTMessage* override&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-98">
+          <mxGeometry y="78" width="370" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-102" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="uK2bDwmYoRoU14FmoIUb-98" target="uK2bDwmYoRoU14FmoIUb-74">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="230" y="980" as="sourcePoint" />
+            <mxPoint x="220" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-103" value="&lt;h1 style=&quot;font-size: 30px;&quot;&gt;[ MQTTMessage Codec]&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=30;fontStyle=1" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
+          <mxGeometry x="-1240" y="180" width="460" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-0" value="MQTTLightControlMesssage" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
+          <mxGeometry x="980" y="1050" width="410" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-1" value="&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-0">
+          <mxGeometry y="26" width="410" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-0">
+          <mxGeometry y="70" width="410" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-3" value="+ MQTTLightControlMessage(topic:string&amp;amp;, payload:map&amp;amp;&amp;lt;string, string&amp;gt;&lt;br&gt;+ MQTTLightControlMessage(topic:string&amp;amp;, payload:string&amp;amp;)&lt;br&gt;+ ~ MQTTLightControlMessage()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-0">
+          <mxGeometry y="78" width="410" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-5" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="bfrbCoQijTXxGF58ycTW-0" target="uK2bDwmYoRoU14FmoIUb-73">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="665" y="900" as="sourcePoint" />
+            <mxPoint x="320" y="625" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-18" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="bfrbCoQijTXxGF58ycTW-20" target="uK2bDwmYoRoU14FmoIUb-73">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1625" y="1050" as="sourcePoint" />
+            <mxPoint x="1572" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-19" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="bfrbCoQijTXxGF58ycTW-24" target="uK2bDwmYoRoU14FmoIUb-73">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="2035" y="1050" as="sourcePoint" />
+            <mxPoint x="1582" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-20" value="MQTTLightStatusMesssage" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
+          <mxGeometry x="1415" y="1050" width="410" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-21" value="&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-20">
+          <mxGeometry y="26" width="410" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-22" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-20">
+          <mxGeometry y="70" width="410" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-23" value="+&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-20">
+          <mxGeometry y="78" width="410" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-24" value="MQTTCurtainControlMesssage" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
+          <mxGeometry x="1850" y="1050" width="410" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-25" value="&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-24">
+          <mxGeometry y="26" width="410" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-26" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-24">
+          <mxGeometry y="70" width="410" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="bfrbCoQijTXxGF58ycTW-27" value="+&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-24">
+          <mxGeometry y="78" width="410" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-104" value="code" parent="uK2bDwmYoRoU14FmoIUb-0" />
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-105" value="class MQTTMessageCodec{&lt;br&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;virtual MQTTMessage* decode(string&amp;amp; message) = 0;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;virtual MQTTMessage* encode(map&amp;lt;string, string&amp;gt;&amp;amp; payload) = 0;&amp;nbsp;&lt;br&gt;}&lt;br&gt;&lt;br&gt;&lt;br&gt;class MQTTMessage{&lt;br&gt;private:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;string topic_;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;map &amp;lt;string, string&amp;gt; payload_;&lt;br&gt;&amp;nbsp;string jsonstr_;&lt;br&gt;&lt;br&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessage(string&amp;amp; topic, map&amp;lt;string, string&amp;gt;&amp;amp; payload);&lt;br&gt;&amp;nbsp;MQTTMessage(string&amp;amp; topic, string&amp;amp; jsonstr);&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;virtual ~MQTTMessage();&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;string getTopic();&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;map&amp;lt;string,string&amp;gt; getPayload();&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;string getJsonString();&lt;br&gt;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="2030" y="-550" width="459" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-106" value="MQTTMessage(string&amp;amp; topic, map&amp;lt;string, string&amp;gt;&amp;amp; payload):topic_(topic), payload_(payload){&lt;br&gt;&lt;br&gt;}&lt;br&gt;&lt;br&gt;MQTTMessage(string&amp;amp; topic, string&amp;amp; jsonstr):topic_(topic), jsonstr_(jsonstr){&lt;br&gt;&lt;br&gt;}&lt;br&gt;&lt;br&gt;~MQTTMessage(){&lt;br&gt;&lt;br&gt;}&lt;br&gt;&lt;br&gt;string getTopic(){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;return topic_;&lt;br&gt;}&lt;br&gt;&lt;br&gt;map&amp;lt;string, string&amp;gt; getPayload(){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;return payload_;&lt;br&gt;}&lt;br&gt;&lt;br&gt;string getJsonString(){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;return jsonstr_;&lt;br&gt;}&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="2030" y="-190" width="439" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-107" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-104" source="uK2bDwmYoRoU14FmoIUb-108" target="uK2bDwmYoRoU14FmoIUb-117">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-108" value="class LightCodec public MQTTMessageCodec{&lt;br&gt;private:&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;string m_topic;&lt;/font&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;br&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessage* decode(string&amp;amp; message) override;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessage* encode(map&amp;lt;string, string&amp;gt;&amp;amp; payload) override;&lt;br&gt;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="-410" y="1060" width="410" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-109" value="LightCodec(string&amp;amp; topic):m_topic(topic){&lt;br&gt;}&lt;br&gt;&lt;br&gt;MQTTMessage* decode(string&amp;amp; message){&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;JSON_Value *root;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;JSON_Object *object;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;map&amp;lt;string, string&amp;gt; msg;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;root = json_parse_string(message.c_str());&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;object = json_value_get_object(root);&lt;br&gt;&lt;br&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/span&gt;&lt;font color=&quot;#ff0000&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;@@ topic별로 json data parsing해서 map 형식으로 구성하고&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;/span&gt;@@ 해당 map data 기반으로 new MQTTMessage()&lt;/font&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;if(m_topic == &quot;light_control&quot;){&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;map[&quot;type&quot;] = string(json_object_get_string(object, &quot;type&quot;));&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;map[&quot;control&quot;] = string(json_object_get_string(object, &quot;control&quot;));&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;map[&quot;desired.id&quot;] = to_string(json_object_dotget_number(object, &quot;desired.id&quot;);&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;map[&quot;desired.state&quot;] = string(json_object_dotget_string(object, &quot;desired.state&quot;);&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;}&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;else if(m_topic == &quot;light_xxx){&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;}&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;return new MQTTMessage(m_topic, msg);&lt;br&gt;&lt;br&gt;}&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="-410" y="1240" width="480" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-110" value="MQTTMessage* encode(map&amp;lt;string, string&amp;gt;&amp;amp; payload){&lt;br&gt; &lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;JSON_Value *root;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;JSON_Object *object;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;root = json_value_init_object();&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;object = json_value_get_object(root);&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;&amp;nbsp; &amp;nbsp; @@ topic별로 map data기반 param을 가지고 json구성&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;@@ json to string변환후 string data기반으로&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;@@ new MQTTMessage() 호출..&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;@@ APP단에서는 getTopic()/toJson()만 사용가능?&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;string jsonstr;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;if(m_topic == &quot;light_status&quot;){&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;json_object_set_string(root, &quot;type&quot;, &quot;Light&quot;);&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;json_object_set_string(root, &quot;status&quot;, &quot;on&quot;);&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;json_object_dotset_number(root, &quot;reported.id&quot;. stoi(map[&quot;id&quot;]));&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;json_object_dotset_string(root, &quot;reported.state&quot;, map[&quot;state&quot;]);&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; //&lt;/span&gt;&lt;/span&gt;json_object_set_number(root, &quot;id&quot;, stoi(map[&quot;id&quot;]));&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; //&lt;/span&gt;&lt;/span&gt;json_object_set_string(root, &quot;state&quot;, map[&quot;state&quot;]);&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;jsonstr = string(json_serialize_to_string_pretty(root));&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;}&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;else if(m_topic == &quot;light_xxxx){&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;}&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;return new MQTTMessage(m_topic, jsonstr);&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="-410" y="1700" width="410" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-111" value="class MQTTMessageCodecFactory{&lt;br&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;virtual MQTTMessageCodec* createCodec(string&amp;amp; topic) = 0;&lt;br&gt;}&lt;br&gt;&lt;br&gt;&lt;br&gt;class MQTTMessageCodecFactoryImpl : public MQTTMessageCodecFactory{&lt;br&gt;&lt;br&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessageCodec* createCodec(string&amp;amp; topic) override;&lt;br&gt;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="-872" y="750" width="459" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-112" value="MQTTMessageCodecFactoryImpl::createCodec(string&amp;amp; topic){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;// &lt;/span&gt;if(topic == &quot;light){&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;// light_control 과 light_status 토픽을 하나의 LightCodec으로 지원?&lt;br&gt;&lt;/font&gt;&amp;nbsp; if(topic.find(&quot;light) != string::npos)&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;r&lt;/span&gt;eturn new LightCodec(topic);&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;}&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;if(topic == &quot;curtain)&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;return new CurtainCodec(topic);&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;return nullptr;&lt;br&gt;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="-880" y="960" width="459" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-113" value="MQTTMessageCodecFactory* m_mqttFactory;&lt;br&gt;&lt;br&gt;&lt;br&gt;Coordinator::Coordinator(){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;m_mqttFactory = new MQTTMessageCodecFactory();&lt;br&gt;}&lt;br&gt;&lt;br&gt;&lt;br&gt;Coordinator::processMessage(string&amp;amp; topic, string&amp;amp; message){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessageCodec* mqttCodec = m_mqttFactory-&amp;gt;createCodec(topic);&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessage* mqttMsg = mqttCodec-&amp;gt;decode(message);&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;//Print topic/msg data&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;printf(&quot;Topic : %s\n&quot;, mqttMsg-&amp;gt;getTopic());&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;map&amp;lt;string,string&amp;gt; payload = mqttMsg-&amp;gt;getPayload();&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;for( auto&amp;amp; data:payload){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;printf(&quot;%s -- %s\n&quot;, data.first.c_str(), data.second);&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;}&lt;br&gt;&lt;br&gt;&lt;br&gt;Coordinator::generateMessage(string&amp;amp; topic, map&amp;lt;string,string&amp;gt; message){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessageCodec* mqttCodec = m_mqttFactory-&amp;gt;createCodec(topic);&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessage* mqttMsg = mqttCodec-&amp;gt;encode(message);&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;//print topic / msg data&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;printf(&quot;Topic : %s\n&quot;, mqttMsg-&amp;gt;getTopic());&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;printf(&quot;msg : %s\n&quot;, mqttMsg-&amp;gt;toJson());&lt;br&gt;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="-1380" y="600" width="459" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-114" value="&lt;div&gt;{&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&quot;type&quot;: &quot;Light&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;control&quot;: &quot;on&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;desired&quot;: {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;id&quot;: 123222,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;state&quot;: &quot;off&quot;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;}&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="-563" y="1300" width="150" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-115" value="&lt;div&gt;{&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&quot;type&quot;: &quot;Light&quot;,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&quot;status&quot; : &quot;on&quot;,&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&quot;reported&quot;:{&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;id&quot;: &quot;1234&quot;,&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&quot;state&quot;: &quot;on/off&quot;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;}&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="-571" y="1700" width="150" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-116" value="&lt;h1&gt;Json 포맷이 fixed된 거라 가정?&lt;/h1&gt;&lt;p&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;decode/encode모두 기존 map data형식&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;map&amp;lt;string, string&amp;gt; 유지하고..&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;decode()는&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/p&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;전달된 string을 가지고 json파싱해서 map 구성하고,&lt;/div&gt;&lt;p&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;encode()는&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;전달된&amp;nbsp;map&amp;lt;string, string&amp;gt;을 가지고 json을 구성하도록&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;이때, json의 subobject형식들도&amp;nbsp;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;해당 encode()내부에 토픽별로 구성하도록 코딩??&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="140" y="1520" width="370" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-117" value="[Q] m_topic을 MQTTMessageCodec에 정의? 아니면 LightCodec에 정의?" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="50" y="1110" width="305" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-118" value="[Q] Json형식이 토픽별로 fixed된거라 가정?" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="130" y="1450" width="305" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-119" value="[Q] Light관련 토픽이 light_control / light_status처럼 여러개가 있어도 하나의 LightCodec()으로 동작하도록?" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="-880" y="1190" width="305" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-121" value="[Q] json 형식 파싱/Generate동작은 LightCodec&lt;br&gt;즉, MQTTMessageCodec에서 구현..." style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
+          <mxGeometry x="-750" y="1530" width="305" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-122" value="Q&amp;A" visible="0" parent="uK2bDwmYoRoU14FmoIUb-0" />
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-123" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-122" source="uK2bDwmYoRoU14FmoIUb-106" target="uK2bDwmYoRoU14FmoIUb-124">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1680" y="755" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uK2bDwmYoRoU14FmoIUb-124" value="&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 19px;&quot;&gt;[Q]&lt;/font&gt;&lt;br&gt;toJson()내부에서&amp;nbsp;&lt;br&gt;map 기반 data를 json으로 convert하는 부분이 들어가는데..&lt;br&gt;이 부분을 LightCodec의 encode()내부에서 해야 하나??&lt;br&gt;&lt;br&gt;json변환기능을 한곳에서 하기위해??&lt;br&gt;즉, MQTTMessageCodec내부에서 변환하는 동작을 전체 관장하고&lt;br&gt;MQTTMessage class는 단지 저장된? topic, payload만 반환하도록????&lt;br&gt;&lt;br&gt;-&amp;gt; [A] 해당 경우로 테스트하고 판단하는 것이 좋아 보임(Teho)&lt;br&gt;&lt;br&gt;&lt;br&gt;[NEW-1]&lt;br&gt;toJson()을 toJsonString()으로 변경?&lt;br&gt;내부적으로 getPayload()로 저장된 map기반 data를&lt;br&gt;json object로 변환하고 이후 string으로 변환해서 return하도록..&lt;br&gt;&lt;br&gt;즉, MQTTMessageCodec의 encode()도 decode와 동일하게 map기반 data로&lt;br&gt;new MQTTMessage()를 호출하고&lt;br&gt;&lt;br&gt;이때, encode()내부적으로 param으로 전달된 map기반 param을&lt;br&gt;Light/Curtain Encode동작에 따라 구현?&lt;br&gt;&lt;br&gt;MQTTMessage의 toJsonString()은 map기반 data 즉 payload_를 변환해서&lt;br&gt;string으로 반환하는 동작을 하도록.." style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-122">
+          <mxGeometry x="1760" y="570" width="439" height="370" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="iMEITMDCuTk2jDnLHP7V" name="_(3)Parser">
+    <mxGraphModel dx="7902" dy="5798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1810,6 +2047,21 @@
         <mxCell id="OQ1UGzGpG21SpnC_k9Tt-102" value="&lt;h1 style=&quot;font-size: 30px;&quot;&gt;[ MQTTMessage Codec]&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=30;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-1240" y="180" width="460" height="120" as="geometry" />
         </mxCell>
+        <mxCell id="YVK6xBYa_4Od-9QUXAJI-1" value="[A] MQTTMessage를 부모class로 해서 각 device의 토픽별로 자식 class를 만들어서 해당 class 내부에서..&lt;br&gt;즉, 해당 자식 class 생성자에서 json을 이용한 parsing 및 generating 동작을 구현하는 게 맞아 보임(by teho)" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" vertex="1" parent="1">
+          <mxGeometry x="840" y="770" width="305" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YVK6xBYa_4Od-9QUXAJI-3" value="[A] m_topic이 공통된 맴버 변수이기 때문에 부모 class에 위치시키는게 맞아보이고, 이때 해당 m_topic은 protected영역으로 할당되어야 한다.(by teho)&lt;br&gt;&lt;br&gt;private영역에 할당하면 자식 class에서 접근하지 못하기 때문에" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1250" width="305" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="YVK6xBYa_4Od-9QUXAJI-5" value="[A] 해당 방법으로 진행하면 될듯하다." style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-880" y="1290" width="305" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YVK6xBYa_4Od-9QUXAJI-8" value="[A] json 데이터의 파싱 / Geneate는&lt;br&gt;MQTTMessage를 상속한 각 토픽별 class내부에서&lt;br&gt;즉 생성자에서 수행하도록 하는게 좋아 보임&lt;br&gt;(by teho)" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-940" y="1640" width="305" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YVK6xBYa_4Od-9QUXAJI-10" value="[A] 태호로 부터 명확한 의견은 받지 못하였다.&lt;br&gt;음... 일단 현재 생각대로 진행해 보자!!!" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="515" y="1450" width="305" height="60" as="geometry" />
+        </mxCell>
         <mxCell id="XBz9YGCFssMDr7L3o-Fg-29" value="code" parent="0" />
         <mxCell id="OQ1UGzGpG21SpnC_k9Tt-103" value="class MQTTMessageCodec{&lt;br&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;virtual MQTTMessage* decode(string&amp;amp; message) = 0;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;virtual MQTTMessage* encode(map&amp;lt;string, string&amp;gt;&amp;amp; payload) = 0;&amp;nbsp;&lt;br&gt;}&lt;br&gt;&lt;br&gt;&lt;br&gt;class MQTTMessage{&lt;br&gt;private:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;string topic_;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;map &amp;lt;string, string&amp;gt; payload_;&lt;br&gt;&amp;nbsp;string jsonstr_;&lt;br&gt;&lt;br&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessage(string&amp;amp; topic, map&amp;lt;string, string&amp;gt;&amp;amp; payload);&lt;br&gt;&amp;nbsp;MQTTMessage(string&amp;amp; topic, string&amp;amp; jsonstr);&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;virtual ~MQTTMessage();&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;string getTopic();&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;map&amp;lt;string,string&amp;gt; getPayload();&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;string getJsonString();&lt;br&gt;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="XBz9YGCFssMDr7L3o-Fg-29" vertex="1">
           <mxGeometry x="1241" y="200" width="459" height="340" as="geometry" />
@@ -1847,17 +2099,32 @@
         <mxCell id="w3Nvgo_VESgkNJzO1BtO-1" value="&lt;h1&gt;Json 포맷이 fixed된 거라 가정?&lt;/h1&gt;&lt;p&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;decode/encode모두 기존 map data형식&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;map&amp;lt;string, string&amp;gt; 유지하고..&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;decode()는&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/p&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;전달된 string을 가지고 json파싱해서 map 구성하고,&lt;/div&gt;&lt;p&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;encode()는&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;전달된&amp;nbsp;map&amp;lt;string, string&amp;gt;을 가지고 json을 구성하도록&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;이때, json의 subobject형식들도&amp;nbsp;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;해당 encode()내부에 토픽별로 구성하도록 코딩??&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="XBz9YGCFssMDr7L3o-Fg-29" vertex="1">
           <mxGeometry x="140" y="1520" width="370" height="250" as="geometry" />
         </mxCell>
+        <mxCell id="YVK6xBYa_4Od-9QUXAJI-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="XBz9YGCFssMDr7L3o-Fg-29" source="PEHzVx4Yi6QH9VN551mc-1" target="YVK6xBYa_4Od-9QUXAJI-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="PEHzVx4Yi6QH9VN551mc-1" value="[Q] m_topic을 MQTTMessageCodec에 정의? 아니면 LightCodec에 정의?" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="XBz9YGCFssMDr7L3o-Fg-29" vertex="1">
           <mxGeometry x="50" y="1110" width="305" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YVK6xBYa_4Od-9QUXAJI-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="XBz9YGCFssMDr7L3o-Fg-29" source="PEHzVx4Yi6QH9VN551mc-3" target="YVK6xBYa_4Od-9QUXAJI-10">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PEHzVx4Yi6QH9VN551mc-3" value="[Q] Json형식이 토픽별로 fixed된거라 가정?" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="XBz9YGCFssMDr7L3o-Fg-29" vertex="1">
           <mxGeometry x="130" y="1450" width="305" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="YVK6xBYa_4Od-9QUXAJI-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="XBz9YGCFssMDr7L3o-Fg-29" source="PEHzVx4Yi6QH9VN551mc-4" target="YVK6xBYa_4Od-9QUXAJI-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="PEHzVx4Yi6QH9VN551mc-4" value="[Q] Light관련 토픽이 light_control / light_status처럼 여러개가 있어도 하나의 LightCodec()으로 동작하도록?" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="XBz9YGCFssMDr7L3o-Fg-29" vertex="1">
           <mxGeometry x="-880" y="1190" width="305" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="YVK6xBYa_4Od-9QUXAJI-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="XBz9YGCFssMDr7L3o-Fg-29" source="PEHzVx4Yi6QH9VN551mc-5" target="YVK6xBYa_4Od-9QUXAJI-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="PEHzVx4Yi6QH9VN551mc-5" value="[Q] 단순히 MQTT 토픽 / payload를 저장하고 반환해주는 동작" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="XBz9YGCFssMDr7L3o-Fg-29" vertex="1">
           <mxGeometry x="840" y="630" width="305" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YVK6xBYa_4Od-9QUXAJI-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="XBz9YGCFssMDr7L3o-Fg-29" source="PEHzVx4Yi6QH9VN551mc-6" target="YVK6xBYa_4Od-9QUXAJI-8">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PEHzVx4Yi6QH9VN551mc-6" value="[Q] json 형식 파싱/Generate동작은 LightCodec&lt;br&gt;즉, MQTTMessageCodec에서 구현..." style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="XBz9YGCFssMDr7L3o-Fg-29" vertex="1">
           <mxGeometry x="-750" y="1530" width="305" height="60" as="geometry" />
@@ -1869,243 +2136,6 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="OQ1UGzGpG21SpnC_k9Tt-111" value="&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 19px;&quot;&gt;[Q]&lt;/font&gt;&lt;br&gt;toJson()내부에서&amp;nbsp;&lt;br&gt;map 기반 data를 json으로 convert하는 부분이 들어가는데..&lt;br&gt;이 부분을 LightCodec의 encode()내부에서 해야 하나??&lt;br&gt;&lt;br&gt;json변환기능을 한곳에서 하기위해??&lt;br&gt;즉, MQTTMessageCodec내부에서 변환하는 동작을 전체 관장하고&lt;br&gt;MQTTMessage class는 단지 저장된? topic, payload만 반환하도록????&lt;br&gt;&lt;br&gt;-&amp;gt; [A] 해당 경우로 테스트하고 판단하는 것이 좋아 보임(Teho)&lt;br&gt;&lt;br&gt;&lt;br&gt;[NEW-1]&lt;br&gt;toJson()을 toJsonString()으로 변경?&lt;br&gt;내부적으로 getPayload()로 저장된 map기반 data를&lt;br&gt;json object로 변환하고 이후 string으로 변환해서 return하도록..&lt;br&gt;&lt;br&gt;즉, MQTTMessageCodec의 encode()도 decode와 동일하게 map기반 data로&lt;br&gt;new MQTTMessage()를 호출하고&lt;br&gt;&lt;br&gt;이때, encode()내부적으로 param으로 전달된 map기반 param을&lt;br&gt;Light/Curtain Encode동작에 따라 구현?&lt;br&gt;&lt;br&gt;MQTTMessage의 toJsonString()은 map기반 data 즉 payload_를 변환해서&lt;br&gt;string으로 반환하는 동작을 하도록.." style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="OQ1UGzGpG21SpnC_k9Tt-107" vertex="1">
-          <mxGeometry x="1760" y="570" width="439" height="370" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram name="_(3)Parser" id="jehH3IPVBT5-vJIcJAir">
-    <mxGraphModel dx="4057" dy="2500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-0" />
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-1" parent="uK2bDwmYoRoU14FmoIUb-0" />
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-70" value="MQTTMessage" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
-          <mxGeometry x="1440" y="680" width="360" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-71" value="# m_topic : string&lt;br&gt;# m_payload : map&amp;lt;string, string&amp;gt;&lt;br&gt;# m_jsonstr : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-70">
-          <mxGeometry y="26" width="360" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-72" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-70">
-          <mxGeometry y="76" width="360" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-73" value="+ MQTTMessage(topic:string&amp;amp;, payload:map&amp;amp;&amp;lt;string,string&amp;gt;)&lt;br&gt;+ MQTTMessage(topic:string&amp;amp;, payload string&amp;amp;)&lt;br&gt;+ getTopic() : string&lt;br&gt;+ getPayload() : map&amp;lt;string, string&amp;gt;&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ toJson() : string&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-70">
-          <mxGeometry y="84" width="360" height="86" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-74" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&lt;b&gt;MQTTMessageCodec&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;strike&gt;+ mtopic : string&lt;/strike&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ decode(message:string&amp;amp;) : MQTTMessage*&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ encode(payload:map&amp;amp;&amp;lt;string,string&amp;gt;) : MQTTMessage*&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
-          <mxGeometry x="40" y="520" width="360" height="95" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-75" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="uK2bDwmYoRoU14FmoIUb-76" target="uK2bDwmYoRoU14FmoIUb-74">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-76" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&lt;b&gt;MQTTMessageCodecFactory&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ createDecoder(topic:string&amp;amp;) : MQTTMessageDecoder*&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ createEncoder(topic:string&amp;amp;) : MQTTMessageEncoder*&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ createCodec(topic:string&amp;amp;) : MQTTMessageCodec*&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
-          <mxGeometry x="-790" y="330" width="360" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-77" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0.067;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="uK2bDwmYoRoU14FmoIUb-82" target="uK2bDwmYoRoU14FmoIUb-74">
-          <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="470" y="940" as="sourcePoint" />
-            <mxPoint x="1280" y="902" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-78" value="MQTTMessageCodecFactoryImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
-          <mxGeometry x="-820" y="560" width="420" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-79" value="-&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-78">
-          <mxGeometry y="26" width="420" height="44" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-80" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-78">
-          <mxGeometry y="70" width="420" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-81" value="+ createDecoder(topic:string&amp;amp;) : MQTTMessageDecoder*&amp;nbsp; override&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ createEncoder(topic:string&amp;amp;) : MQTTMessageEncoder* override&lt;br&gt;&lt;br&gt;+ createCodec(topic:string&amp;amp;) : MQTTMessageCodec* override&lt;br&gt;&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-78">
-          <mxGeometry y="78" width="420" height="72" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-82" value="LightCodec" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
-          <mxGeometry x="-410" y="890" width="380" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-83" value="- m_topic:string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-82">
-          <mxGeometry y="26" width="380" height="44" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-84" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-82">
-          <mxGeometry y="70" width="380" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-85" value="+ decode(message:string&amp;amp;) : MQTTMessage*&amp;nbsp; override&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ encode(payload:map&amp;amp;&amp;lt;string,string&amp;gt;) : MQTTMessage* override&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-82">
-          <mxGeometry y="78" width="380" height="72" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-86" value="CurtainCodec" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
-          <mxGeometry x="30" y="890" width="370" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-87" value="- m_topic:string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-86">
-          <mxGeometry y="26" width="370" height="44" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-88" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-86">
-          <mxGeometry y="70" width="370" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-89" value="+ decode(message:string&amp;amp;) : MQTTMessage*&amp;nbsp; override&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ encode(payload:map&amp;amp;&amp;lt;string,string&amp;gt;) : MQTTMessage* override&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-86">
-          <mxGeometry y="78" width="370" height="72" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-90" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="uK2bDwmYoRoU14FmoIUb-86" target="uK2bDwmYoRoU14FmoIUb-74">
-          <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="-10" y="980" as="sourcePoint" />
-            <mxPoint x="218" y="763" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-91" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="uK2bDwmYoRoU14FmoIUb-78" target="uK2bDwmYoRoU14FmoIUb-76">
-          <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="-400" y="70" as="sourcePoint" />
-            <mxPoint x="-600" y="-135" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="uK2bDwmYoRoU14FmoIUb-93" target="uK2bDwmYoRoU14FmoIUb-76">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-93" value="main.cpp" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
-          <mxGeometry x="-1240" y="450" width="250" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-94" value="- mqttDecoder : MQTTMessageDecoderFactory&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;- mqttEncoder : MQTTMessageEncoderFactory&lt;br&gt;&lt;br&gt;- mqttCodec : MQTTMessageCodecFactory&lt;br&gt;&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-93">
-          <mxGeometry y="26" width="250" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-95" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-93">
-          <mxGeometry y="86" width="250" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-96" value="+ main(argc, argv) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-93">
-          <mxGeometry y="94" width="250" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-97" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="uK2bDwmYoRoU14FmoIUb-74" target="uK2bDwmYoRoU14FmoIUb-70">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="610" y="670" as="sourcePoint" />
-            <mxPoint x="1050" y="806" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-98" value="GasCodec" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
-          <mxGeometry x="470" y="890" width="370" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-99" value="- m_topic:string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-98">
-          <mxGeometry y="26" width="370" height="44" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-100" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-98">
-          <mxGeometry y="70" width="370" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-101" value="+ decode(message:string&amp;amp;) : MQTTMessage*&amp;nbsp; override&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;+ encode(payload:map&amp;amp;&amp;lt;string,string&amp;gt;) : MQTTMessage* override&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-98">
-          <mxGeometry y="78" width="370" height="72" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-102" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="uK2bDwmYoRoU14FmoIUb-98" target="uK2bDwmYoRoU14FmoIUb-74">
-          <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="230" y="980" as="sourcePoint" />
-            <mxPoint x="220" y="760" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-103" value="&lt;h1 style=&quot;font-size: 30px;&quot;&gt;[ MQTTMessage Codec]&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=30;fontStyle=1" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
-          <mxGeometry x="-1240" y="180" width="460" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-0" value="MQTTLightControlMesssage" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
-          <mxGeometry x="980" y="1050" width="410" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-1" value="&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-0">
-          <mxGeometry y="26" width="410" height="44" as="geometry" />
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-0">
-          <mxGeometry y="70" width="410" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-3" value="+ MQTTLightControlMessage(topic:string&amp;amp;, payload:map&amp;amp;&amp;lt;string, string&amp;gt;&lt;br&gt;+ MQTTLightControlMessage(topic:string&amp;amp;, payload:string&amp;amp;)&lt;br&gt;+ ~ MQTTLightControlMessage()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-0">
-          <mxGeometry y="78" width="410" height="72" as="geometry" />
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-5" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="bfrbCoQijTXxGF58ycTW-0" target="uK2bDwmYoRoU14FmoIUb-73">
-          <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="665" y="900" as="sourcePoint" />
-            <mxPoint x="320" y="625" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-18" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="bfrbCoQijTXxGF58ycTW-20" target="uK2bDwmYoRoU14FmoIUb-73">
-          <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="1625" y="1050" as="sourcePoint" />
-            <mxPoint x="1572" y="840" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-19" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-1" source="bfrbCoQijTXxGF58ycTW-24" target="uK2bDwmYoRoU14FmoIUb-73">
-          <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="2035" y="1050" as="sourcePoint" />
-            <mxPoint x="1582" y="850" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-20" value="MQTTLightStatusMesssage" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
-          <mxGeometry x="1415" y="1050" width="410" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-21" value="&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-20">
-          <mxGeometry y="26" width="410" height="44" as="geometry" />
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-22" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-20">
-          <mxGeometry y="70" width="410" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-23" value="+&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-20">
-          <mxGeometry y="78" width="410" height="72" as="geometry" />
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-24" value="MQTTCurtainControlMesssage" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-1">
-          <mxGeometry x="1850" y="1050" width="410" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-25" value="&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-24">
-          <mxGeometry y="26" width="410" height="44" as="geometry" />
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-26" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-24">
-          <mxGeometry y="70" width="410" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="bfrbCoQijTXxGF58ycTW-27" value="+&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="bfrbCoQijTXxGF58ycTW-24">
-          <mxGeometry y="78" width="410" height="72" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-104" value="code" parent="uK2bDwmYoRoU14FmoIUb-0" />
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-105" value="class MQTTMessageCodec{&lt;br&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;virtual MQTTMessage* decode(string&amp;amp; message) = 0;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;virtual MQTTMessage* encode(map&amp;lt;string, string&amp;gt;&amp;amp; payload) = 0;&amp;nbsp;&lt;br&gt;}&lt;br&gt;&lt;br&gt;&lt;br&gt;class MQTTMessage{&lt;br&gt;private:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;string topic_;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;map &amp;lt;string, string&amp;gt; payload_;&lt;br&gt;&amp;nbsp;string jsonstr_;&lt;br&gt;&lt;br&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessage(string&amp;amp; topic, map&amp;lt;string, string&amp;gt;&amp;amp; payload);&lt;br&gt;&amp;nbsp;MQTTMessage(string&amp;amp; topic, string&amp;amp; jsonstr);&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;virtual ~MQTTMessage();&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;string getTopic();&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;map&amp;lt;string,string&amp;gt; getPayload();&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;string getJsonString();&lt;br&gt;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="2030" y="-550" width="459" height="340" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-106" value="MQTTMessage(string&amp;amp; topic, map&amp;lt;string, string&amp;gt;&amp;amp; payload):topic_(topic), payload_(payload){&lt;br&gt;&lt;br&gt;}&lt;br&gt;&lt;br&gt;MQTTMessage(string&amp;amp; topic, string&amp;amp; jsonstr):topic_(topic), jsonstr_(jsonstr){&lt;br&gt;&lt;br&gt;}&lt;br&gt;&lt;br&gt;~MQTTMessage(){&lt;br&gt;&lt;br&gt;}&lt;br&gt;&lt;br&gt;string getTopic(){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;return topic_;&lt;br&gt;}&lt;br&gt;&lt;br&gt;map&amp;lt;string, string&amp;gt; getPayload(){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;return payload_;&lt;br&gt;}&lt;br&gt;&lt;br&gt;string getJsonString(){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;return jsonstr_;&lt;br&gt;}&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="2030" y="-190" width="439" height="360" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-107" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-104" source="uK2bDwmYoRoU14FmoIUb-108" target="uK2bDwmYoRoU14FmoIUb-117">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-108" value="class LightCodec public MQTTMessageCodec{&lt;br&gt;private:&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;string m_topic;&lt;/font&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;br&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessage* decode(string&amp;amp; message) override;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessage* encode(map&amp;lt;string, string&amp;gt;&amp;amp; payload) override;&lt;br&gt;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="-410" y="1060" width="410" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-109" value="LightCodec(string&amp;amp; topic):m_topic(topic){&lt;br&gt;}&lt;br&gt;&lt;br&gt;MQTTMessage* decode(string&amp;amp; message){&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;JSON_Value *root;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;JSON_Object *object;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;map&amp;lt;string, string&amp;gt; msg;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;root = json_parse_string(message.c_str());&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;object = json_value_get_object(root);&lt;br&gt;&lt;br&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/span&gt;&lt;font color=&quot;#ff0000&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;@@ topic별로 json data parsing해서 map 형식으로 구성하고&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;/span&gt;@@ 해당 map data 기반으로 new MQTTMessage()&lt;/font&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;if(m_topic == &quot;light_control&quot;){&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;map[&quot;type&quot;] = string(json_object_get_string(object, &quot;type&quot;));&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;map[&quot;control&quot;] = string(json_object_get_string(object, &quot;control&quot;));&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;map[&quot;desired.id&quot;] = to_string(json_object_dotget_number(object, &quot;desired.id&quot;);&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;map[&quot;desired.state&quot;] = string(json_object_dotget_string(object, &quot;desired.state&quot;);&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;}&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;else if(m_topic == &quot;light_xxx){&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;}&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;return new MQTTMessage(m_topic, msg);&lt;br&gt;&lt;br&gt;}&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="-410" y="1240" width="480" height="440" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-110" value="MQTTMessage* encode(map&amp;lt;string, string&amp;gt;&amp;amp; payload){&lt;br&gt; &lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;JSON_Value *root;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;JSON_Object *object;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;root = json_value_init_object();&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;object = json_value_get_object(root);&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;&amp;nbsp; &amp;nbsp; @@ topic별로 map data기반 param을 가지고 json구성&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;@@ json to string변환후 string data기반으로&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;@@ new MQTTMessage() 호출..&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;@@ APP단에서는 getTopic()/toJson()만 사용가능?&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;string jsonstr;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;if(m_topic == &quot;light_status&quot;){&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;json_object_set_string(root, &quot;type&quot;, &quot;Light&quot;);&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;json_object_set_string(root, &quot;status&quot;, &quot;on&quot;);&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;json_object_dotset_number(root, &quot;reported.id&quot;. stoi(map[&quot;id&quot;]));&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;json_object_dotset_string(root, &quot;reported.state&quot;, map[&quot;state&quot;]);&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; //&lt;/span&gt;&lt;/span&gt;json_object_set_number(root, &quot;id&quot;, stoi(map[&quot;id&quot;]));&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; //&lt;/span&gt;&lt;/span&gt;json_object_set_string(root, &quot;state&quot;, map[&quot;state&quot;]);&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;jsonstr = string(json_serialize_to_string_pretty(root));&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;}&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;else if(m_topic == &quot;light_xxxx){&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;}&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;return new MQTTMessage(m_topic, jsonstr);&lt;br&gt;&lt;br&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="-410" y="1700" width="410" height="460" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-111" value="class MQTTMessageCodecFactory{&lt;br&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;virtual MQTTMessageCodec* createCodec(string&amp;amp; topic) = 0;&lt;br&gt;}&lt;br&gt;&lt;br&gt;&lt;br&gt;class MQTTMessageCodecFactoryImpl : public MQTTMessageCodecFactory{&lt;br&gt;&lt;br&gt;public:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessageCodec* createCodec(string&amp;amp; topic) override;&lt;br&gt;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="-872" y="750" width="459" height="210" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-112" value="MQTTMessageCodecFactoryImpl::createCodec(string&amp;amp; topic){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;// &lt;/span&gt;if(topic == &quot;light){&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;// light_control 과 light_status 토픽을 하나의 LightCodec으로 지원?&lt;br&gt;&lt;/font&gt;&amp;nbsp; if(topic.find(&quot;light) != string::npos)&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;r&lt;/span&gt;eturn new LightCodec(topic);&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;}&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;if(topic == &quot;curtain)&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;return new CurtainCodec(topic);&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;return nullptr;&lt;br&gt;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="-880" y="960" width="459" height="210" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-113" value="MQTTMessageCodecFactory* m_mqttFactory;&lt;br&gt;&lt;br&gt;&lt;br&gt;Coordinator::Coordinator(){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;m_mqttFactory = new MQTTMessageCodecFactory();&lt;br&gt;}&lt;br&gt;&lt;br&gt;&lt;br&gt;Coordinator::processMessage(string&amp;amp; topic, string&amp;amp; message){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessageCodec* mqttCodec = m_mqttFactory-&amp;gt;createCodec(topic);&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessage* mqttMsg = mqttCodec-&amp;gt;decode(message);&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;//Print topic/msg data&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;printf(&quot;Topic : %s\n&quot;, mqttMsg-&amp;gt;getTopic());&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;map&amp;lt;string,string&amp;gt; payload = mqttMsg-&amp;gt;getPayload();&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;for( auto&amp;amp; data:payload){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;printf(&quot;%s -- %s\n&quot;, data.first.c_str(), data.second);&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;}&lt;br&gt;&lt;br&gt;&lt;br&gt;Coordinator::generateMessage(string&amp;amp; topic, map&amp;lt;string,string&amp;gt; message){&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessageCodec* mqttCodec = m_mqttFactory-&amp;gt;createCodec(topic);&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;MQTTMessage* mqttMsg = mqttCodec-&amp;gt;encode(message);&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;//print topic / msg data&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;printf(&quot;Topic : %s\n&quot;, mqttMsg-&amp;gt;getTopic());&lt;br&gt;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;printf(&quot;msg : %s\n&quot;, mqttMsg-&amp;gt;toJson());&lt;br&gt;}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="-1380" y="600" width="459" height="470" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-114" value="&lt;div&gt;{&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&quot;type&quot;: &quot;Light&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;control&quot;: &quot;on&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;desired&quot;: {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;id&quot;: 123222,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;state&quot;: &quot;off&quot;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;}&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="-563" y="1300" width="150" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-115" value="&lt;div&gt;{&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&quot;type&quot;: &quot;Light&quot;,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&quot;status&quot; : &quot;on&quot;,&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&quot;reported&quot;:{&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;id&quot;: &quot;1234&quot;,&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;&quot;state&quot;: &quot;on/off&quot;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;}&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="-571" y="1700" width="150" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-116" value="&lt;h1&gt;Json 포맷이 fixed된 거라 가정?&lt;/h1&gt;&lt;p&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;decode/encode모두 기존 map data형식&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;map&amp;lt;string, string&amp;gt; 유지하고..&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;decode()는&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/p&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;전달된 string을 가지고 json파싱해서 map 구성하고,&lt;/div&gt;&lt;p&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;encode()는&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;전달된&amp;nbsp;map&amp;lt;string, string&amp;gt;을 가지고 json을 구성하도록&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;이때, json의 subobject형식들도&amp;nbsp;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;해당 encode()내부에 토픽별로 구성하도록 코딩??&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="140" y="1520" width="370" height="250" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-117" value="[Q] m_topic을 MQTTMessageCodec에 정의? 아니면 LightCodec에 정의?" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="50" y="1110" width="305" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-118" value="[Q] Json형식이 토픽별로 fixed된거라 가정?" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="130" y="1450" width="305" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-119" value="[Q] Light관련 토픽이 light_control / light_status처럼 여러개가 있어도 하나의 LightCodec()으로 동작하도록?" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="-880" y="1190" width="305" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-121" value="[Q] json 형식 파싱/Generate동작은 LightCodec&lt;br&gt;즉, MQTTMessageCodec에서 구현..." style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-104">
-          <mxGeometry x="-750" y="1530" width="305" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-122" value="Q&amp;A" visible="0" parent="uK2bDwmYoRoU14FmoIUb-0" />
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-123" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="uK2bDwmYoRoU14FmoIUb-122" source="uK2bDwmYoRoU14FmoIUb-106" target="uK2bDwmYoRoU14FmoIUb-124">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1680" y="755" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="uK2bDwmYoRoU14FmoIUb-124" value="&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 19px;&quot;&gt;[Q]&lt;/font&gt;&lt;br&gt;toJson()내부에서&amp;nbsp;&lt;br&gt;map 기반 data를 json으로 convert하는 부분이 들어가는데..&lt;br&gt;이 부분을 LightCodec의 encode()내부에서 해야 하나??&lt;br&gt;&lt;br&gt;json변환기능을 한곳에서 하기위해??&lt;br&gt;즉, MQTTMessageCodec내부에서 변환하는 동작을 전체 관장하고&lt;br&gt;MQTTMessage class는 단지 저장된? topic, payload만 반환하도록????&lt;br&gt;&lt;br&gt;-&amp;gt; [A] 해당 경우로 테스트하고 판단하는 것이 좋아 보임(Teho)&lt;br&gt;&lt;br&gt;&lt;br&gt;[NEW-1]&lt;br&gt;toJson()을 toJsonString()으로 변경?&lt;br&gt;내부적으로 getPayload()로 저장된 map기반 data를&lt;br&gt;json object로 변환하고 이후 string으로 변환해서 return하도록..&lt;br&gt;&lt;br&gt;즉, MQTTMessageCodec의 encode()도 decode와 동일하게 map기반 data로&lt;br&gt;new MQTTMessage()를 호출하고&lt;br&gt;&lt;br&gt;이때, encode()내부적으로 param으로 전달된 map기반 param을&lt;br&gt;Light/Curtain Encode동작에 따라 구현?&lt;br&gt;&lt;br&gt;MQTTMessage의 toJsonString()은 map기반 data 즉 payload_를 변환해서&lt;br&gt;string으로 반환하는 동작을 하도록.." style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="uK2bDwmYoRoU14FmoIUb-122">
           <mxGeometry x="1760" y="570" width="439" height="370" as="geometry" />
         </mxCell>
       </root>
